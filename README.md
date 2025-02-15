@@ -8,4 +8,4 @@ Game core development, exemplified by an RPG card game with a hierarchy of chara
 ## Build
 Makefile
 ## Run
-./PlayGame
+./LabWork
