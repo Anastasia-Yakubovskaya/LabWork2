@@ -7,10 +7,10 @@ on:
   pull_request:    
     branches:
       - main
+
 jobs:  
   build:
     runs-on: ubuntu-latest
-    
     
     steps:    
       - name: Checkout code      
@@ -18,16 +18,15 @@ jobs:
    
       - name: Set up GCC      
         run: sudo apt-get install -y g++
-       
         
       - name: Install Google Test      
         run: |
           sudo apt-get install -y libgtest-dev        
           sudo apt-get install -y cmake 
+          cd /usr/src/gtest && sudo cmake . && sudo make && sudo cp libgtest*.a /usr/lib
 
-
-     - name: Build with Makefile      
-       run: make
+      - name: Build with Makefile      
+        run: make
       
-     - name: Run tests
-       run: ./runTests
+      - name: Run tests
+        run: ./runTests
