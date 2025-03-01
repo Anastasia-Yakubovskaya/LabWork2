@@ -2,12 +2,10 @@ name: C++ CI
 
 on:  
   push:
-    branches:      
-      - main
+    branches: [main, CreatingGameBranch, descriptionBranch]
   pull_request:    
-    branches:
-      - main
-
+    branches: [main, CreatingGameBranch, descriptionBranch]
+     
 jobs:  
   build:
     runs-on: ubuntu-latest
