@@ -1,50 +1,59 @@
-## Требования к системе
+### System Requirements
 
-1. Платформа:
-   - Игра должна работать на платформе Linux.
+- Platform:
 
-2. Интерфейс:
-   - Игра должна использовать текстовый интерфейс (графику можно добавить позже).
+- The game must run on the Linux platform.
 
-3. Колоды карт:
-   - Игра должна иметь 3 колоды карт:
-     - Строительство.
-     - Случайность.
-     - Бонусные карты.
+- Interface:
 
-4. Характеристики игрока:
-   - Игроки должны выбирать одну из характеристик в начале игры.
+- The game must use a text interface (graphics can be added later).
 
----
+- Card Decks:
 
-## Сценарий использования
+- The game must have 3 card decks:
 
-### Начало игры
+- Construction.
 
-1. Игрок выбирает характеристику.
-2. Игра генерирует поле 20x20.
+- Randomness.
 
-### Строительство
+- Bonus cards.
 
-1. Игрок вытягивает карты из колоды Строительство.
-2. Игрок размещает карты на поле.
+- Player Characteristics:
 
-### Случайное событие
+- Players must choose one of the characteristics at the beginning of the game.
 
-1. Игрок вытягивает карту из колоды Случайность.
-2. Игрок получает или теряет очки в зависимости от выпавшей карты.
+### Use Case Scenario
 
-### Бонусные карты
+### Starting the Game
 
-1. Игрок вытягивает карту из Бонусной колоды.
-2. Игрок использует эту карту сразу или оставляет на будущее.
+- The player selects a characteristic.
 
-### Взаимодействие с другими игроками
+- The game generates a 20x20 grid.
 
-1. Игрок может использовать карты из Бонусной колоды для взаимодействия с другими игроками.
+### Construction
 
-### Конец игры
+- The player draws cards from the Construction deck.
 
-1. Игра заканчивается, когда все клетки заняты.
-2. Побеждает игрок с наибольшим количеством очков.
-a
+- The player places cards on the grid.
+
+### Random Event
+
+- The player draws a card from the Randomness deck.
+
+- The player gains or loses points depending on the drawn card.
+
+### Bonus Cards
+
+- The player draws a card from the Bonus deck.
+
+- The player uses this card immediately or saves it for later.
+
+### Interaction with Other Players
+
+- The player can use cards from the Bonus deck to interact with other players.
+
+### End of Game
+
+- The game ends when all cells are occupied.
+
+- The player with the highest score wins.

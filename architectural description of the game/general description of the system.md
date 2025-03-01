@@ -1,53 +1,72 @@
-# Описание системы
+### System Description
 
-Система представляет собой аналог карточной RPG игры, в которой игроки строят деревни на поле размером 20x20 клеток. Каждый игрок в начале игры выбирает одну из характеристик, которая влияет на его действия в процессе игры:
+The system is an analog of a card RPG game in which players build villages on a 20x20 grid. At the beginning of the game, each player chooses one of the characteristics that affects their actions during the game:
+- Player Characteristics:
 
-- Характеристики игрока:
-  - Стихийное бедствие наносит на 20% меньше урона.
-  - Строительство зданий стоит на 10% дешевле.
-  - Игрок получает на 5% больше очков.
+- Natural disasters deal 20% less damage.
 
-## Механика игры
+- Building structures costs 10% less.
 
-### Ход игрока
+- The player earns 5% more points.
 
-1. Выбор клеток:
-   - Игрок выбирает от одной до трех клеток для строительства.
+### Game Mechanics
 
-2. Вытягивание карт:
-   - Игрок вытягивает карты из колоды Строительство. Количество карт рассчитывается как:
+### Player's Turn
+
+- Cell Selection:
+
+- The player selects from one to three cells for construction.
+
+- Drawing Cards:
+
+- The player draws cards from the Construction deck. The number of cards is calculated as:
+
      \[
-     \text{Количество карт} = 3 - \text{Количество выбранных клеток}
+
+     \text{Number of cards} = 3 - \text{Number of selected cells}
+
      \]
 
-3. Строительство:
-   - Игрок строит постройки на поле. Если построек больше, чем свободных клеток, остальные карты остаются "в руке".
+- Construction:
 
-4. Случайное событие:
-   - Игрок вытягивает карту из колоды Случайность и разыгрывает её.
+- The player builds structures on the grid. If there are more structures than free cells, the remaining cards stay "in hand."
 
-5. Бросок кубика:
-   - Игрок кидает кубик. Если выпало 5 или 6, игрок тянет карту из Бонусной колоды.
+- Random Event:
 
-6. Использование бонусной карты:
-   - Игрок может сыграть карту из Бонусной колоды.
+- The player draws a card from the Randomness deck and plays it.
 
-### Колоды карт
+- Dice Roll:
 
-- Строительство:
-  - Карты зданий, деревьев, воды.
-- Случайность:
-  - Карты стихийных бедствий, экономических катастроф.
-- Бонусные карты:
-  - Дают игроку возможность избежать последствий карт из колоды Случайность или получить бонусные очки.
+- The player rolls a die. If a 5 or 6 is rolled, the player draws a card from the Bonus deck.
 
-### Взаимодействие с другими игроками
+- Using a Bonus Card:
 
-- Из Бонусной колоды игрок может вытянуть карту, с помощью которой можно:
-  - Развязать войну с соперником.
-  - Забрать у него карты.
+- The player may play a card from the Bonus deck.
 
-### Конец игры
+### Card Decks
 
-- Игра заканчивается, когда все клетки заняты.
-- Побеждает игрок с наибольшим количеством очков.
+- Construction:
+
+- Cards for buildings, trees, and water.
+
+- Randomness:
+
+- Cards for natural disasters and economic crises.
+
+- Bonus Cards:
+
+- Allow the player to avoid the consequences of cards from the Randomness deck or gain bonus points.
+
+### Interaction with Other Players
+
+- From the Bonus deck, the player can draw a card that allows them to:
+
+- Declare war on an opponent.
+
+- Take cards from them.
+
+### End of Game
+
+- The game ends when all cells are occupied.
+
+- The player with the highest score wins.

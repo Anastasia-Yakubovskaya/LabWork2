@@ -1,96 +1,153 @@
-# План тестирования для игры на C++
+### Testing Plan for a C++ Game
 
+### Types of Testing
 
-## Типы тестирования
+### 1. Unit Testing
 
-### 1. Модульное тестирование (Unit Testing)
-- Тестирование отдельных классов и методов.
-- Пример: Проверка методов build(), destroy() в классе Building.
+- Testing individual classes and methods.
 
-### 2. Интеграционное тестирование (Integration Testing)
-- Тестирование взаимодействия между классами.
-- Пример: Проверка взаимодействия между Player, Game, и Board.
+- Example: Checking the methods build(), destroy() in the Building class.
 
-### 3. Системное тестирование (System Testing)
-- Тестирование всей системы в целом.
-- Пример: Проверка полного игрового цикла (от начала до конца игры).
+### 2. Integration Testing
 
-### 4. Тестирование пользовательского интерфейса (UI Testing)
-- Проверка корректности отображения текстового интерфейса.
-- Пример: Проверка вывода сообщений о ходе игры.
+- Testing the interaction between classes.
 
+- Example: Checking the interaction between Player, Game, and Board.
 
-## Тестовые сценарии
+### 3. System Testing
 
-### Тестирование игрового поля (Board)
-- Тест 1: Проверка размещения объекта на пустой клетке.
-  - Входные данные: Координаты (x, y), объект "Дом".
-  - Ожидаемый результат: Объект успешно размещен на поле.
-- Тест 2: Попытка размещения объекта на занятой клетке.
-  - Входные данные: Координаты (x, y), объект "Дерево" (клетка уже занята).
-  - Ожидаемый результат: Ошибка или сообщение о невозможности размещения.
+- Testing the entire system as a whole.
 
-### Тестирование игрока (Player)
-- Тест 1: Выбор клетки для строительства.
-  - Входные данные: Координаты (x, y).
-  - Ожидаемый результат: Клетка выбрана для строительства.
-- Тест 2: Вытягивание карты из колоды.
-  - Входные данные: Колода строительства.
-  - Ожидаемый результат: Карта успешно добавлена в руку игрока.
+- Example: Checking the complete game cycle (from start to finish).
 
-### Тестирование колод карт (Deck)
-- Тест 1: Вытягивание карты из колоды.
-  - Входные данные: Колода строительства.
-  - Ожидаемый результат: Карта успешно вытянута.
-- Тест 2: Перетасовка колоды.
-  - Входные данные: Колода случайных событий.
-  - Ожидаемый результат: Карты в колоде перемешаны.
+### 4. User Interface Testing (UI Testing)
 
-### Тестирование событий (EventCard, NaturalDisaster, EconomicCrisis)
-- Тест 1: Активация стихийного бедствия.
-  - Входные данные: Карта "Пожар".
-  - Ожидаемый результат: Урон нанесен постройкам игрока.
-- Тест 2: Активация экономического кризиса.
-  - Входные данные: Карта "Инфляция".
-  - Ожидаемый результат: Стоимость строительства увеличена.
+- Checking the correctness of the text interface display.
 
-### Тестирование системы подсчета очков (ScoringSystem)
-- Тест 1: Обновление очков игрока.
-  - Входные данные: Игрок, 10 очков.
-  - Ожидаемый результат: Очки игрока увеличены на 10.
-- Тест 2: Проверка победителя.
-  - Входные данные: Игроки с разным количеством очков.
-  - Ожидаемый результат: Игрок с наибольшим количеством очков объявлен победителем.
+- Example: Checking the output of messages about the game's progress.
 
-### Тестирование ИИ (AI)
-- Тест 1: Ход ИИ.
-  - Входные данные: Игровое поле с доступными клетками.
-  - Ожидаемый результат: ИИ успешно выбирает клетку для строительства.
+### Test Scenarios
 
-### Тестирование игрового цикла (Game)
-- Тест 1: Начало игры.
-  - Входные данные: Игроки, поле, колоды карт.
-  - Ожидаемый результат: Игра успешно начата.
-- Тест 2: Завершение игры.
-  - Входные данные: Все клетки поля заняты.
-  - Ожидаемый результат: Игра завершена, победитель объявлен.
+### Testing the Game Board (Board)
 
-## Тестовые данные
-- Игровое поле:
-  - Пустое поле 20x20.
-  - Поле с частично занятыми клетками.
-  - Полностью занятое поле.
-- Карты:
-  - Карты строительства 
-  - Карты случайных событий 
-  - Бонусные карты 
-- Игроки:
-  - Игроки с разными характеристиками (уменьшение урона, снижение стоимости строительства, получение большего количества очков).
+- Test 1: Checking the placement of an object on an empty cell.
 
-## Инструменты тестирования
-- **Фреймворки для модульноготестирования**:
-  - Google Test
-- Инструменты для интеграционного тестирования:
-  - Автоматизированные тесты с использованием Google Test.
+- Input: Coordinates (x, y), object "House".
 
+- Expected Result: The object is successfully placed on the board.
 
+- Test 2: Attempting to place an object on an occupied cell.
+
+- Input: Coordinates (x, y), object "Tree" (the cell is already occupied).
+
+- Expected Result: An error or message indicating that placement is not possible.
+
+### Testing the Player (Player)
+
+- Test 1: Selecting a cell for construction.
+
+- Input: Coordinates (x, y).
+
+- Expected Result: The cell is selected for construction.
+
+- Test 2: Drawing a card from the deck.
+
+- Input: Construction deck.
+
+- Expected Result: The card is successfully added to the player's hand.
+
+### Testing the Deck of Cards (Deck)
+
+- Test 1: Drawing a card from the deck.
+
+- Input: Construction deck.
+
+- Expected Result: The card is successfully drawn.
+
+- Test 2: Shuffling the deck.
+
+- Input: Deck of random events.
+
+- Expected Result: The cards in the deck are shuffled.
+
+### Testing Events (EventCard, NaturalDisaster, EconomicCrisis)
+
+- Test 1: Activating a natural disaster.
+
+- Input: Card "Fire".
+
+- Expected Result: Damage is inflicted on the player's buildings.
+
+- Test 2: Activating an economic crisis.
+
+- Input: Card "Inflation".
+
+- Expected Result: The cost of construction is increased.
+
+### Testing the Scoring System (ScoringSystem)
+
+- Test 1: Updating the player's score.
+
+- Input: Player, 10 points.
+
+- Expected Result: The player's score is increased by 10.
+
+- Test 2: Checking the winner.
+
+- Input: Players with different scores.
+
+- Expected Result: The player with the highest score is declared the winner.
+
+### Testing AI (AI)
+
+- Test 1: AI move.
+
+- Input: Game board with available cells.
+
+- Expected Result: The AI successfully selects a cell for construction.
+
+### Testing the Game Cycle (Game)
+
+- Test 1: Starting the game.
+
+- Input: Players, board, decks of cards.
+
+- Expected Result: The game is successfully started.
+
+- Test 2: Ending the game.
+
+- Input: All cells on the board are occupied.
+
+- Expected Result: The game is over, and the winner is declared.
+
+### Test Data
+
+- Game Board:
+
+- Empty 20x20 board.
+
+- Board with partially occupied cells.
+
+- Fully occupied board.
+
+- Cards:
+
+- Construction cards 
+
+- Random event cards 
+
+- Bonus cards 
+
+- Players:
+
+- Players with different characteristics (damage reduction, reduced construction costs, earning more points).
+
+### Testing Tools
+
+- **Unit Testing Frameworks**:
+
+- Google Test
+
+- Tools for integration testing:
+
+- Automated tests using Google Test.
