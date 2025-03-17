@@ -1,32 +1,31 @@
-#include "Game.h"
-#include <iostream>
-#include <cstdlib>
+#include "game.h"
+#include "ConstructionCard.h"
+#include "NaturalDisaster.h"
+#include "EconomicEvent.h"
+#include "PoliticalEvent.h"
+#include "VarEvent.h"
+#include "TradeEvent.h"
+#include "StealCardEvent.h"
 
-void Game::chooseCharacteristics(Player& player, AI& ai) {
-    std::vector<std::string> characteristics = {
-        "Natural disasters deal 20% less damage",
-        "Building structures costs 10% less",
-        "The player earns 5% more points"
-    };
-
-    std::cout << "Выберите характеристику для игрока:\n";
-    for (size_t i = 0; i < characteristics.size(); ++i) {
-        std::cout << i + 1 << ". " << characteristics[i] << "\n";
+Game::Game() {
+    // Добавление карт в колоду
+    for (int i = 0; i < 5; ++i) {
+        deck.addCard(new ConstructionCard("House", -5));
+        deck.addCard(new ConstructionCard("Tree", -3));
+        deck.addCard(new ConstructionCard("Water", -10));
+        deck.addCard(new NaturalDisaster("Flood", 10));
+        deck.addCard(new NaturalDisaster("Earthquake", 15));
+        deck.addCard(new NaturalDisaster("Drought", 20));
+        deck.addCard(new EconomicEvent("Default", "Decreases score by 25"));
+        deck.addCard(new EconomicEvent("Crisis", "Decreases score by 50"));
+        deck.addCard(new PoliticalEvent("Revolution", "Affects all buildings and score"));
+        deck.addCard(new VarEvent("Score Reduction", "Reduces opponent's score", nullptr, 10));
+        deck.addCard(new TradeEvent("Building Exchange", "Exchanges buildings with opponent", nullptr, "Resource"));
+        deck.addCard(new StealCardEvent("Card Steal", "Steals a card from opponent", nullptr));
     }
-    int choice;
-    std::cin >> choice;
-
-    if (choice >= 1 && choice <= characteristics.size()) {
-        player.characteristic = Characteristic(characteristics[choice - 1]);
-    } else {
-        std::cout << "Неверный выбор. Характеристика не выбрана.\n";
-    }
-
-    int aiChoice = rand() % characteristics.size();
-    ai.characteristic = Characteristic(characteristics[aiChoice]);
-    std::cout << ai.name << " выбрал характеристику: " << characteristics[aiChoice] << "\n";
+    deck.shuffle();
 }
 
 void Game::startGame() {
-    std::cout << "Игра началась!" << std::endl;
+    std::cout << "The game has started!" << std::endl;
 }

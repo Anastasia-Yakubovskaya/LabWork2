@@ -5,10 +5,9 @@
 
 class Characteristic {
 public:
-    std::string type; // Тип характеристики
-
+    std::string type;
     Characteristic(const std::string& type);
-    void applyEffect();
+    void applyEffect(int& score, int change) const;
 };
 
-#endif
+#endif // CHARACTERISTIC_H

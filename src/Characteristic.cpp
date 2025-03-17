@@ -1,14 +1,18 @@
-#include "Characteristic.h"
+#include "characteristic.h"
 #include <iostream>
 
 Characteristic::Characteristic(const std::string& type) : type(type) {}
 
-void Characteristic::applyEffect() {
+void Characteristic::applyEffect(int& score, int change) const {
     if (type == "Natural disasters deal 20% less damage") {
-        std::cout << "Эффект: Природные катастрофы наносят на 20% меньше урона.\n";
+        std::cout << "Effect: Natural disasters deal 20% less damage.\n";
     } else if (type == "Building structures costs 10% less") {
-        std::cout << "Эффект: Строительство стоит на 10% меньше.\n";
+        score += static_cast<int>(change * 0.9);
+        std::cout << "Effect: Building structures costs 10% less. Score changed by: " << static_cast<int>(change * 0.9) << "\n";
     } else if (type == "The player earns 5% more points") {
-        std::cout << "Эффект: Игрок зарабатывает на 5% больше очков.\n";
+        score += static_cast<int>(change * 1.05);
+        std::cout << "Effect: The player earns 5% more points. Score changed by: " << static_cast<int>(change * 1.05) << "\n";
+    } else {
+        score += change;
     }
 }

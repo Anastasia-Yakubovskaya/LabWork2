@@ -1,15 +1,34 @@
-#include "Player.h"
-#include "Board.h"
-#include <cstdlib>
+#include "player.h"
+#include <iostream>
 
 Player::Player(const std::string& name, const Characteristic& characteristic)
-    : name(name), score(0), characteristic(characteristic) {}
+    : PlayerBase(name, characteristic) {}
 
-void Player::chooseCell(int x, int y, Board& board) {
-    board.placeObject(x, y, "1");
-    score += 10;
+void Player::drawCard(Deck& deck, bool isConstruction) {
+    Card* card = isConstruction ? deck.drawConstructionCard() : deck.drawEventCard();
+    if (card) {
+        hand.push_back(card);
+        std::cout << name << " drew a card: " << card->name << "\n";
+    }
 }
 
-int Player::rollDice() {
-    return rand() % 6 + 1;
+void Player::drawBonusCard(Deck& deck) {
+    Card* card = deck.drawBonusCard();
+    if (card) {
+        hand.push_back(card);
+        std::cout << name << " drew a bonus card: " << card->name << "\n";
+    }
+}
+
+void Player::showHand() const {
+    std::cout << "Cards in hand of " << name << ":\n";
+    for (const Card* card : hand) {
+        std::cout << "- " << card->name << " (" << card->description << ")\n";
+    }
+}
+
+Player::~Player() {
+    for (Card* card : hand) {
+        delete card;
+    }
 }
