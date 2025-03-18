@@ -1,26 +1,34 @@
+/*Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2*/
 #include "deck.h"
 #include <random>
 #include <algorithm>
 #include <iostream>
-#include "ConstructionCard.h"  
-#include "NaturalDisaster.h"   
-#include "EconomicEvent.h"    
-#include "PoliticalEvent.h"    
-#include "VarEvent.h"          
-#include "TradeEvent.h"      
-#include "StealCardEvent.h" 
+#include "constructioncard.h"
+#include "naturaldisaster.h"
+#include "economicevent.h"
+#include "politicalevent.h"
+#include "varevent.h"
+#include "tradeevent.h"
+#include "stealcardevent.h"
 
-void Deck::addCard(Card* card) {
-    if (dynamic_cast<ConstructionCard*>(card)) {
+void Deck::addCard(Card* card)
+{
+    if (dynamic_cast<ConstructionCard*>(card))
+    {
         constructionCards.push_back(card);
-    } else if (dynamic_cast<EventCard*>(card)) {
+    }
+    else if (dynamic_cast<EventCard*>(card))
+    {
         eventCards.push_back(card);
-    } else if (dynamic_cast<BonusCard*>(card)) {
+    }
+    else if (dynamic_cast<BonusCard*>(card))
+    {
         bonusCards.push_back(card);
     }
 }
 
-void Deck::shuffle() {
+void Deck::shuffle()
+{
     std::random_device rd;
     std::mt19937 g(rd());
     std::shuffle(constructionCards.begin(), constructionCards.end(), g);
@@ -29,8 +37,10 @@ void Deck::shuffle() {
     std::cout << "Deck shuffled!\n";
 }
 
-Card* Deck::drawConstructionCard() {
-    if (constructionCards.empty()) {
+Card* Deck::drawConstructionCard()
+{
+    if (constructionCards.empty())
+    {
         std::cout << "No more construction cards left!\n";
         return nullptr;
     }
@@ -39,8 +49,10 @@ Card* Deck::drawConstructionCard() {
     return card;
 }
 
-Card* Deck::drawEventCard() {
-    if (eventCards.empty()) {
+Card* Deck::drawEventCard()
+{
+    if (eventCards.empty())
+    {
         std::cout << "No more event cards left!\n";
         return nullptr;
     }
@@ -49,8 +61,10 @@ Card* Deck::drawEventCard() {
     return card;
 }
 
-Card* Deck::drawBonusCard() {
-    if (bonusCards.empty()) {
+Card* Deck::drawBonusCard()
+{
+    if (bonusCards.empty())
+    {
         std::cout << "No more bonus cards left!\n";
         return nullptr;
     }
@@ -59,22 +73,28 @@ Card* Deck::drawBonusCard() {
     return card;
 }
 
-size_t Deck::getRemainingCards() const {
+size_t Deck::getRemainingCards() const
+{
     return constructionCards.size() + eventCards.size() + bonusCards.size();
 }
 
-bool Deck::isAnyDeckEmpty() const {
+bool Deck::isAnyDeckEmpty() const
+{
     return constructionCards.empty() || eventCards.empty() || bonusCards.empty();
 }
 
-Deck::~Deck() {
-    for (Card* card : constructionCards) {
+Deck::~Deck()
+{
+    for (Card* card : constructionCards)
+    {
         delete card;
     }
-    for (Card* card : eventCards) {
+    for (Card* card : eventCards)
+    {
         delete card;
     }
-    for (Card* card : bonusCards) {
+    for (Card* card : bonusCards)
+    {
         delete card;
     }
 }

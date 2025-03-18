@@ -1,3 +1,4 @@
+/*Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2*/
 #include "utils.h"
 #include <iostream>
 
@@ -7,7 +8,8 @@
 #include <unistd.h>
 #endif
 
-void clearConsole() {
+void clearConsole()
+{
 #ifdef _WIN32
     system("cls");
 #else

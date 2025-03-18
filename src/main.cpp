@@ -1,20 +1,22 @@
+/*Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2*/
 #include "game.h"
 #include "player.h"
 #include "ai.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "graphics.h"  // Добавлено для использования макросов YELLOW и RESET
-#include "utils.h"  
-#include "ConstructionCard.h"  // Для ConstructionCard
-#include "NaturalDisaster.h"   // Для NaturalDisaster
-#include "EconomicEvent.h"     // Для EconomicEvent
-#include "PoliticalEvent.h"    // Для PoliticalEvent
-#include "VarEvent.h"          // Для VarEvent
-#include "TradeEvent.h"        // Для TradeEvent
-#include "StealCardEvent.h" 
+#include "graphics.h"
+#include "utils.h"
+#include "constructioncard.h"
+#include "naturaldisaster.h"
+#include "economicevent.h"
+#include "politicalevent.h"
+#include "varevent.h"
+#include "tradeevent.h"
+#include "stealcardevent.h"
 
-int main() {
+int main()
+{
     srand(static_cast<unsigned int>(time(0)));
 
     Game game;
@@ -23,23 +25,28 @@ int main() {
     std::cout << "Enter player name: ";
     std::cin >> playerName;
 
-    std::vector<std::string> characteristics = {
+    std::vector<std::string> characteristics =
+    {
         "Natural disasters deal 20% less damage",
         "Building structures costs 10% less",
         "The player earns 5% more points"
     };
 
     std::cout << "Choose a characteristic for the player:\n";
-    for (size_t i = 0; i < characteristics.size(); ++i) {
+    for (size_t i = 0; i < characteristics.size(); ++i)
+    {
         std::cout << i + 1 << ". " << characteristics[i] << "\n";
     }
     int choice;
     std::cin >> choice;
 
     Characteristic playerCharacteristic("");
-    if (choice >= 1 && static_cast<size_t>(choice) <= characteristics.size()) {
+    if (choice >= 1 && static_cast<size_t>(choice) <= characteristics.size())
+    {
         playerCharacteristic = Characteristic(characteristics[choice - 1]);
-    } else {
+    }
+    else
+    {
         std::cout << "Invalid choice. No characteristic selected.\n";
     }
 
@@ -54,8 +61,10 @@ int main() {
 
     clearConsole();
 
-    while (true) {
-        if (game.deck.isAnyDeckEmpty()) {
+    while (true)
+    {
+        if (game.deck.isAnyDeckEmpty())
+        {
             std::cout << "One of the decks is empty. The game is over.\n";
             break;
         }
@@ -69,24 +78,28 @@ int main() {
         player.drawCard(game.deck, true);
         player.showHand();
 
-        if (!player.hand.empty()) {
+        if (!player.hand.empty())
+        {
             Card* card = player.hand.back();
             player.hand.pop_back();
 
-            if (auto* constructionCard = dynamic_cast<ConstructionCard*>(card)) {
+            if (auto* constructionCard = dynamic_cast<ConstructionCard*>(card))
+            {
                 std::cout << "Drew a construction card: " << constructionCard->type << "\n";
                 std::cout << "Do you want to build an object? (1 - Yes, 0 - No): ";
                 int buildChoice;
                 std::cin >> buildChoice;
 
-                if (buildChoice == 1) {
+                if (buildChoice == 1)
+                {
                     constructionCard->play(player.score, player.characteristic);
 
                     int x, y;
                     std::cout << "Enter coordinates (x y) to place the object (or 0 to exit): ";
                     std::cin >> x;
 
-                    if (x == 0) {
+                    if (x == 0)
+                    {
                         std::cout << "Game over.\n";
                         delete card;
                         break;
@@ -94,25 +107,38 @@ int main() {
 
                     std::cin >> y;
 
-                    if (x >= 0 && x < Board::size && y >= 0 && y < Board::size) {
-                        if (game.board.isCellEmpty(x, y)) {
+                    if (x >= 0 && x < Board::size && y >= 0 && y < Board::size)
+                    {
+                        if (game.board.isCellEmpty(x, y))
+                        {
                             int health = 0;
-                            if (constructionCard->type == "House") {
+                            if (constructionCard->type == "House")
+                            {
                                 health = 30;
-                            } else if (constructionCard->type == "Tree") {
+                            }
+                            else if (constructionCard->type == "Tree")
+                            {
                                 health = 40;
-                            } else if (constructionCard->type == "Water") {
+                            }
+                            else if (constructionCard->type == "Water")
+                            {
                                 health = 50;
                             }
                             std::string object = constructionCard->type.substr(0, 1) + "1";
                             game.board.placeObject(x, y, object, health);
-                        } else {
+                        }
+                        else
+                        {
                             std::cout << "Cell is occupied! Try another one.\n";
                         }
-                    } else {
+                    }
+                    else
+                    {
                         std::cout << "Invalid coordinates. Object not placed.\n";
                     }
-                } else {
+                }
+                else
+                {
                     std::cout << "Player chose not to build an object.\n";
                 }
             }
@@ -122,11 +148,13 @@ int main() {
         player.drawCard(game.deck, false);
         player.showHand();
 
-        if (!player.hand.empty()) {
+        if (!player.hand.empty())
+        {
             Card* card = player.hand.back();
             player.hand.pop_back();
 
-            if (auto* eventCard = dynamic_cast<EventCard*>(card)) {
+            if (auto* eventCard = dynamic_cast<EventCard*>(card))
+            {
                 eventCard->play(player.score, player.characteristic);
 
                 int diceResult1 = game.dice.roll();
@@ -135,17 +163,22 @@ int main() {
                 int diceResult2 = game.dice.roll();
                 std::cout << "Second dice roll result: " << diceResult2 << "\n";
 
-                if (diceResult1 >= 5) {
+                if (diceResult1 >= 5)
+                {
                     std::cout << "Lucky! Player gets a bonus.\n";
-                } else {
+                }
+                else
+                {
                     std::cout << "Unlucky! Player loses points or buildings take damage.\n";
                 }
 
-                if (diceResult2 >= 5) {
+                if (diceResult2 >= 5)
+                {
                     std::cout << "Player gets a bonus card.\n";
                     player.drawBonusCard(game.deck);
 
-                    if (!player.hand.empty()) {
+                    if (!player.hand.empty())
+                    {
                         Card* bonusCard = player.hand.back();
                         player.hand.pop_back();
 
@@ -153,26 +186,38 @@ int main() {
                         int useBonusChoice;
                         std::cin >> useBonusChoice;
 
-                        if (useBonusChoice == 1) {
-                            if (auto* varEvent = dynamic_cast<VarEvent*>(bonusCard)) {
+                        if (useBonusChoice == 1)
+                        {
+                            if (auto* varEvent = dynamic_cast<VarEvent*>(bonusCard))
+                            {
                                 varEvent->target = &ai;
                                 varEvent->trigger();
-                            } else if (auto* stealCardEvent = dynamic_cast<StealCardEvent*>(bonusCard)) {
+                            }
+                            else if (auto* stealCardEvent = dynamic_cast<StealCardEvent*>(bonusCard))
+                            {
                                 stealCardEvent->target = &ai;
                                 stealCardEvent->trigger(game.board, &player);
-                            } else if (auto* tradeEvent = dynamic_cast<TradeEvent*>(bonusCard)) {
+                            }
+                            else if (auto* tradeEvent = dynamic_cast<TradeEvent*>(bonusCard))
+                            {
                                 tradeEvent->target = &ai;
                                 tradeEvent->trigger(game.board);
                             }
-                        } else {
+                        }
+                        else
+                        {
                             std::cout << "Player chose not to use the bonus card.\n";
                         }
 
                         delete bonusCard;
-                    } else {
+                    }
+                    else
+                    {
                         std::cout << "Player has no bonus cards to use.\n";
                     }
-                } else {
+                }
+                else
+                {
                     std::cout << "Unlucky! Player does not get a bonus card.\n";
                 }
             }
@@ -184,24 +229,33 @@ int main() {
         ai.drawCard(game.deck, true);
         ai.showHand();
 
-        if (!ai.hand.empty()) {
+        if (!ai.hand.empty())
+        {
             Card* card = ai.hand.back();
             ai.hand.pop_back();
 
-            if (auto* constructionCard = dynamic_cast<ConstructionCard*>(card)) {
+            if (auto* constructionCard = dynamic_cast<ConstructionCard*>(card))
+            {
                 std::cout << "AI drew a construction card: " << constructionCard->type << "\n";
                 int x, y;
-                do {
+                do
+                {
                     x = rand() % Board::size;
                     y = rand() % Board::size;
-                } while (!game.board.isCellEmpty(x, y));
+                }
+                while (!game.board.isCellEmpty(x, y));
 
                 int health = 0;
-                if (constructionCard->type == "House") {
+                if (constructionCard->type == "House")
+                {
                     health = 30;
-                } else if (constructionCard->type == "Tree") {
+                }
+                else if (constructionCard->type == "Tree")
+                {
                     health = 40;
-                } else if (constructionCard->type == "Water") {
+                }
+                else if (constructionCard->type == "Water")
+                {
                     health = 50;
                 }
                 std::string object = constructionCard->type.substr(0, 1) + "2";
@@ -213,11 +267,13 @@ int main() {
         ai.drawCard(game.deck, false);
         ai.showHand();
 
-        if (!ai.hand.empty()) {
+        if (!ai.hand.empty())
+        {
             Card* card = ai.hand.back();
             ai.hand.pop_back();
 
-            if (auto* eventCard = dynamic_cast<EventCard*>(card)) {
+            if (auto* eventCard = dynamic_cast<EventCard*>(card))
+            {
                 eventCard->play(ai.score, ai.characteristic);
 
                 int diceResult1 = game.dice.roll();
@@ -226,39 +282,54 @@ int main() {
                 int diceResult2 = game.dice.roll();
                 std::cout << "AI's second dice roll result: " << diceResult2 << "\n";
 
-                if (diceResult1 >= 5) {
+                if (diceResult1 >= 5)
+                {
                     std::cout << "Lucky! AI gets a bonus.\n";
-                } else {
+                }
+                else
+                {
                     std::cout << "Unlucky! AI loses points or buildings take damage.\n";
                 }
 
-                if (diceResult2 >= 5) {
+                if (diceResult2 >= 5)
+                {
                     std::cout << "AI gets a bonus card.\n";
                     ai.drawBonusCard(game.deck);
 
-                    if (!ai.hand.empty()) {
+                    if (!ai.hand.empty())
+                    {
                         Card* bonusCard = ai.hand.back();
                         ai.hand.pop_back();
 
-                        if (auto* stealCardEvent = dynamic_cast<StealCardEvent*>(bonusCard)) {
+                        if (auto* stealCardEvent = dynamic_cast<StealCardEvent*>(bonusCard))
+                        {
                             stealCardEvent->target = &player;
                             stealCardEvent->trigger(game.board, &ai);
-                        } else {
+                        }
+                        else
+                        {
                             std::cout << "AI uses the bonus card: " << bonusCard->name << "\n";
-                            if (auto* varEvent = dynamic_cast<VarEvent*>(bonusCard)) {
+                            if (auto* varEvent = dynamic_cast<VarEvent*>(bonusCard))
+                            {
                                 varEvent->target = &player;
                                 varEvent->trigger();
-                            } else if (auto* tradeEvent = dynamic_cast<TradeEvent*>(bonusCard)) {
+                            }
+                            else if (auto* tradeEvent = dynamic_cast<TradeEvent*>(bonusCard))
+                            {
                                 tradeEvent->target = &player;
                                 tradeEvent->trigger(game.board);
                             }
                         }
 
                         delete bonusCard;
-                    } else {
+                    }
+                    else
+                    {
                         std::cout << "AI has no bonus cards to use.\n";
                     }
-                } else {
+                }
+                else
+                {
                     std::cout << "Unlucky! AI does not get a bonus card.\n";
                 }
             }
@@ -279,11 +350,16 @@ int main() {
     std::cout << player.name << ": " << playerFinalScore << " points\n";
     std::cout << ai.name << ": " << aiFinalScore << " points\n";
 
-    if (playerFinalScore > aiFinalScore) {
+    if (playerFinalScore > aiFinalScore)
+    {
         std::cout << "Congratulations, " << player.name << " wins!\n";
-    } else if (playerFinalScore < aiFinalScore) {
+    }
+    else if (playerFinalScore < aiFinalScore)
+    {
         std::cout << ai.name << " wins. Try again!\n";
-    } else {
+    }
+    else
+    {
         std::cout << "It's a tie! Both players have the same score.\n";
     }
 

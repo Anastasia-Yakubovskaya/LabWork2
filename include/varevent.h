@@ -1,7 +1,7 @@
 #ifndef VAREVENT_H
 #define VAREVENT_H
 
-#include "BonusCard.h"
+#include "bonuscard.h"
 #include "playerbase.h"
 
 class VarEvent : public BonusCard {

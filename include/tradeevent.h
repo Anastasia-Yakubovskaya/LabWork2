@@ -1,7 +1,7 @@
 #ifndef TRADEEVENT_H
 #define TRADEEVENT_H
 
-#include "BonusCard.h"
+#include "bonuscard.h"
 #include "playerbase.h"
 #include "board.h"
 

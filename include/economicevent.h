@@ -1,7 +1,7 @@
 #ifndef ECONOMICEVENT_H
 #define ECONOMICEVENT_H
 
-#include "EventCard.h"
+#include "eventcard.h"
 
 class EconomicEvent : public EventCard {
 public:

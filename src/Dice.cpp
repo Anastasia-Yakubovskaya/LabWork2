@@ -1,7 +1,9 @@
+/*Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2*/
 #include "dice.h"
 #include <cstdlib>
 #include <ctime>
 
-int Dice::roll() {
+int Dice::roll()
+{
     return rand() % 6 + 1;
 }

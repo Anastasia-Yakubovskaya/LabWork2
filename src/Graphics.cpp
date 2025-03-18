@@ -1,3 +1,4 @@
+/*Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2*/
 #include "graphics.h"
 #include <iostream>
 
@@ -7,7 +8,8 @@
 #define YELLOW  "\033[33m"
 #define PURPLE  "\033[35m"
 
-void Graphics::displayTitle() {
+void Graphics::displayTitle()
+{
     std::cout << PURPLE << R"(
   ____        _ _     _       __      ___   _     _                  __       _____ 
  |  _ \      (_) |   | |     /  \    |   \ | |   | | __        __   /  \     |  __ \
@@ -19,8 +21,8 @@ void Graphics::displayTitle() {
 }
 
 void Graphics::displayBoard(const std::vector<std::vector<Cell>>& grid) {
-    for (int i = 0; i < grid.size(); ++i) {
-        for (int j = 0; j < grid[i].size(); ++j) {
+    for (size_t i = 0; i < grid.size(); ++i) {
+        for (size_t j = 0; j < grid[i].size(); ++j) {
             if (grid[i][j].isOccupied) {
                 if (grid[i][j].content.back() == '1') {
                     std::cout << GREEN << grid[i][j].content << "(" << grid[i][j].health << ") " << RESET;

@@ -1,7 +1,7 @@
 #ifndef POLITICALEVENT_H
 #define POLITICALEVENT_H
 
-#include "EventCard.h"
+#include "eventcard.h"
 #include "board.h"
 
 class PoliticalEvent : public EventCard {

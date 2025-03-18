@@ -1,7 +1,7 @@
 #ifndef STEALCARDEVENT_H
 #define STEALCARDEVENT_H
 
-#include "BonusCard.h"
+#include "bonuscard.h"
 #include "playerbase.h"
 #include "board.h"
 

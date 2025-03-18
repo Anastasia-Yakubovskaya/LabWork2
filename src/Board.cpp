@@ -1,44 +1,66 @@
+/*Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2*/
 #include "board.h"
 #include "graphics.h"
-#include <iostream>  // Добавлено для использования класса Graphics
+#include <iostream> 
 
-Board::Board() {
+Board::Board()
+{
     grid.resize(size, std::vector<Cell>(size));
-    for (int i = 0; i < size; ++i) {
-        for (int j = 0; j < size; ++j) {
+    for (int i = 0; i < size; ++i)
+    {
+        for (int j = 0; j < size; ++j)
+        {
             grid[i][j] = Cell();
         }
     }
 }
 
-void Board::placeObject(int x, int y, const std::string& object, int health) {
-    if (isCellEmpty(x, y)) {
+void Board::placeObject(int x, int y, const std::string& object, int health)
+{
+    if (isCellEmpty(x, y))
+    {
         grid[x][y].place(object, health);
         std::cout << "Object " << object << " placed on the board at cell (" << x << ", " << y << ").\n";
-    } else {
+    }
+    else
+    {
         std::cout << "Cell is occupied! Try another one.\n";
     }
 }
 
-bool Board::isCellEmpty(int x, int y) {
+bool Board::isCellEmpty(int x, int y)
+{
     return !grid[x][y].isOccupied;
 }
 
-void Board::display() {
-    Graphics::displayBoard(grid);  // Теперь компилятор знает о Graphics
+void Board::display()
+{
+    Graphics::displayBoard(grid);  
 }
 
-int Board::calculateFinalScore(const std::string& playerPrefix) {
+int Board::calculateFinalScore(const std::string& playerPrefix)
+{
     int score = 0;
-    for (int i = 0; i < size; ++i) {
-        for (int j = 0; j < size; ++j) {
-            if (grid[i][j].content.find(playerPrefix) != std::string::npos) {
+    for (int i = 0; i < size; ++i)
+    {
+        for (int j = 0; j < size; ++j)
+        {
+            if (grid[i][j].content.find(playerPrefix) != std::string::npos)
+            {
                 char objectType = grid[i][j].content[0];
-                switch (objectType) {
-                    case 'H': score += 15; break;
-                    case 'T': score += 25; break;
-                    case 'W': score += 30; break;
-                    default: break;
+                switch (objectType)
+                {
+                case 'H':
+                    score += 15;
+                    break;
+                case 'T':
+                    score += 25;
+                    break;
+                case 'W':
+                    score += 30;
+                    break;
+                default:
+                    break;
                 }
             }
         }
@@ -46,17 +68,22 @@ int Board::calculateFinalScore(const std::string& playerPrefix) {
     return score;
 }
 
-void Board::stealBuilding(const std::string& fromPrefix, const std::string& toPrefix) {
+void Board::stealBuilding(const std::string& fromPrefix, const std::string& toPrefix)
+{
     std::vector<std::pair<int, int>> buildings;
-    for (int i = 0; i < size; ++i) {
-        for (int j = 0; j < size; ++j) {
-            if (grid[i][j].content.find(fromPrefix) != std::string::npos) {
+    for (int i = 0; i < size; ++i)
+    {
+        for (int j = 0; j < size; ++j)
+        {
+            if (grid[i][j].content.find(fromPrefix) != std::string::npos)
+            {
                 buildings.push_back({i, j});
             }
         }
     }
 
-    if (!buildings.empty()) {
+    if (!buildings.empty())
+    {
         int index = rand() % buildings.size();
         int x = buildings[index].first;
         int y = buildings[index].second;
@@ -64,17 +91,25 @@ void Board::stealBuilding(const std::string& fromPrefix, const std::string& toPr
         object[object.size() - 1] = toPrefix[0];
         grid[x][y].content = object;
         std::cout << "Building at cell (" << x << ", " << y << ") has been transferred to player " << toPrefix << ".\n";
-    } else {
+    }
+    else
+    {
         std::cout << "The opponent has no buildings to steal.\n";
     }
 }
 
-void Board::exchangeAllBuildings(const std::string& player1Prefix, const std::string& player2Prefix) {
-    for (int i = 0; i < size; ++i) {
-        for (int j = 0; j < size; ++j) {
-            if (grid[i][j].content.find(player1Prefix) != std::string::npos) {
+void Board::exchangeAllBuildings(const std::string& player1Prefix, const std::string& player2Prefix)
+{
+    for (int i = 0; i < size; ++i)
+    {
+        for (int j = 0; j < size; ++j)
+        {
+            if (grid[i][j].content.find(player1Prefix) != std::string::npos)
+            {
                 grid[i][j].content[grid[i][j].content.size() - 1] = player2Prefix[0];
-            } else if (grid[i][j].content.find(player2Prefix) != std::string::npos) {
+            }
+            else if (grid[i][j].content.find(player2Prefix) != std::string::npos)
+            {
                 grid[i][j].content[grid[i][j].content.size() - 1] = player1Prefix[0];
             }
         }

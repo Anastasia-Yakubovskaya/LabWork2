@@ -1,7 +1,7 @@
 #ifndef NATURALDISASTER_H
 #define NATURALDISASTER_H
 
-#include "EventCard.h"
+#include "eventcard.h"
 #include "board.h"
 
 class NaturalDisaster : public EventCard {

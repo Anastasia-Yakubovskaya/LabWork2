@@ -1,15 +1,18 @@
+/*Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2*/
 #include "game.h"
-#include "ConstructionCard.h"
-#include "NaturalDisaster.h"
-#include "EconomicEvent.h"
-#include "PoliticalEvent.h"
-#include "VarEvent.h"
-#include "TradeEvent.h"
-#include "StealCardEvent.h"
+#include "constructioncard.h"
+#include "naturaldisaster.h"
+#include "economicevent.h"
+#include "politicalevent.h"
+#include "varevent.h"
+#include "tradeevent.h"
+#include "stealcardevent.h"
 
-Game::Game() {
+Game::Game()
+{
     // Добавление карт в колоду
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < 5; ++i)
+    {
         deck.addCard(new ConstructionCard("House", -5));
         deck.addCard(new ConstructionCard("Tree", -3));
         deck.addCard(new ConstructionCard("Water", -10));
@@ -26,6 +29,7 @@ Game::Game() {
     deck.shuffle();
 }
 
-void Game::startGame() {
+void Game::startGame()
+{
     std::cout << "The game has started!" << std::endl;
 }
