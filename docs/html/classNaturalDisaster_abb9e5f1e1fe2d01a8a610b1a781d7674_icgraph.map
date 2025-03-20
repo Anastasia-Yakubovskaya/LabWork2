@@ -1,4 +1,0 @@
-<map id="NaturalDisaster::trigger" name="NaturalDisaster::trigger">
-<area shape="rect" id="node1" title="Активирует природное бедствие." alt="" coords="117,5,304,35"/>
-<area shape="rect" id="node2" href="$testnaturaldisaster_8cpp.html#a543c820ce773b7049a843a3e85d8caa7" title="Тест для проверки срабатывания стихийного бедствия." alt="" coords="5,5,69,35"/>
-</map>

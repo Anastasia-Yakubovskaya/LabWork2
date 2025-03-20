@@ -1,4 +1,0 @@
-<map id="Board::placeObject" name="Board::placeObject">
-<area shape="rect" id="node1" title="Размещает объект на игровом поле." alt="" coords="5,5,164,35"/>
-<area shape="rect" id="node2" href="$classBoard.html#aee9a2d0787cca126de34c19c195ac5a3" title="Проверяет, пуста ли ячейка." alt="" coords="212,5,371,35"/>
-</map>

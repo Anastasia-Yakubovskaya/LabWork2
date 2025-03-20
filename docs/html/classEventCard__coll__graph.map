@@ -1,4 +1,0 @@
-<map id="EventCard" name="EventCard">
-<area shape="rect" id="node1" title="Класс, представляющий карту события." alt="" coords="5,191,127,293"/>
-<area shape="rect" id="node2" href="$classCard.html" title="Базовый класс для карт." alt="" coords="9,5,123,143"/>
-</map>

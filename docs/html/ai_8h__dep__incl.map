@@ -1,8 +1,0 @@
-<map id="include/ai.h" name="include/ai.h">
-<area shape="rect" id="node1" title=" " alt="" coords="270,5,374,35"/>
-<area shape="rect" id="node2" href="$AI_8cpp.html" title=" " alt="" coords="5,83,97,112"/>
-<area shape="rect" id="node3" href="$main_8cpp.html" title=" " alt="" coords="122,83,234,112"/>
-<area shape="rect" id="node4" href="$testai_8cpp.html" title=" " alt="" coords="259,83,385,112"/>
-<area shape="rect" id="node5" href="$testaiboard_8cpp.html" title=" " alt="" coords="410,83,578,112"/>
-<area shape="rect" id="node6" href="$testgame_8cpp.html" title=" " alt="" coords="602,83,757,112"/>
-</map>

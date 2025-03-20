@@ -1,4 +1,0 @@
-<map id="PlayerBase" name="PlayerBase">
-<area shape="rect" id="node1" title="Базовый класс для игроков." alt="" coords="8,173,145,311"/>
-<area shape="rect" id="node2" href="$classCharacteristic.html" title="Класс, представляющий характеристику." alt="" coords="5,5,148,108"/>
-</map>

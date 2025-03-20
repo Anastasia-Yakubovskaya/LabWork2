@@ -1,4 +1,0 @@
-<map id="AI::drawBonusCard" name="AI::drawBonusCard">
-<area shape="rect" id="node1" title="Берет бонусную карту из колоды." alt="" coords="5,5,167,35"/>
-<area shape="rect" id="node2" href="$classDeck.html#acccd84b4ce7ecdbb2747da303880a335" title="Вытаскивает бонусную карту." alt="" coords="215,5,397,35"/>
-</map>

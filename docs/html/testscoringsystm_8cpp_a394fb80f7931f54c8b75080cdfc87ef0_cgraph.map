@@ -1,6 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title="Тест для проверки системы подсчета очков." alt="" coords="5,32,69,61"/>
-<area shape="rect" id="node2" href="$classBoard.html#ac18aa73f00b1de4c61e9de5df15df19d" title="Вычисляет финальный счет игрока." alt="" coords="117,5,332,35"/>
-<area shape="rect" id="node3" href="$classBoard.html#a27a1a78ef9fdd5f22e2036bc3d609a43" title="Размещает объект на игровом поле." alt="" coords="145,59,304,88"/>
-<area shape="rect" id="node4" href="$classBoard.html#aee9a2d0787cca126de34c19c195ac5a3" title="Проверяет, пуста ли ячейка." alt="" coords="380,59,539,88"/>
-</map>

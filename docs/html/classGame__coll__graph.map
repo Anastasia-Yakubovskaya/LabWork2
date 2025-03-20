@@ -1,6 +1,0 @@
-<map id="Game" name="Game">
-<area shape="rect" id="node1" title="Класс, представляющий игру." alt="" coords="205,312,324,415"/>
-<area shape="rect" id="node2" href="$classBoard.html" title="Класс, представляющий игровое поле." alt="" coords="5,23,207,229"/>
-<area shape="rect" id="node3" href="$classDice.html" title="Класс, представляющий игральную кость." alt="" coords="231,83,298,169"/>
-<area shape="rect" id="node4" href="$classDeck.html" title="Класс, представляющий колоду карт." alt="" coords="322,5,527,247"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title="Тест для проверки работы кубика (Dice)." alt="" coords="5,5,69,35"/>
-<area shape="rect" id="node2" href="$classDice.html#a612a16c434160895563d19099ca0b33b" title="Бросает игральную кость." alt="" coords="117,5,203,35"/>
-</map>

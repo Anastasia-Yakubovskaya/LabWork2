@@ -1,5 +1,0 @@
-<map id="Player::drawCard" name="Player::drawCard">
-<area shape="rect" id="node1" title="Тянет карту из колоды." alt="" coords="5,32,152,61"/>
-<area shape="rect" id="node2" href="$classDeck.html#a044311930dc24ddf9e659ce69c768caa" title="Вытаскивает строительную карту." alt="" coords="200,5,427,35"/>
-<area shape="rect" id="node3" href="$classDeck.html#a5ca484cc79e48486fd6a2ba08c78954e" title="Вытаскивает карту события." alt="" coords="224,59,403,88"/>
-</map>

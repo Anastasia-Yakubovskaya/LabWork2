@@ -1,9 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title="Тест для проверки полного цикла игры." alt="" coords="5,85,69,115"/>
-<area shape="rect" id="node2" href="$classAI.html#a1c36df63fe947d70bb8743ed6233aa18" title="Берет карту из колоды." alt="" coords="165,5,280,35"/>
-<area shape="rect" id="node5" href="$classPlayer.html#a3ef87a3e79e536318681d1685e2e48be" title="Тянет карту из колоды." alt="" coords="149,59,296,88"/>
-<area shape="rect" id="node6" href="$classDeck.html#a5edb1fe18ad03dac8dca2f66966a566d" title="Получает количество оставшихся карт в колоде." alt="" coords="117,112,328,141"/>
-<area shape="rect" id="node7" href="$classGame.html#ae8638ccdb0ef3bf39a6affa30aa1258f" title="Запускает игру." alt="" coords="149,165,296,195"/>
-<area shape="rect" id="node3" href="$classDeck.html#a044311930dc24ddf9e659ce69c768caa" title="Вытаскивает строительную карту." alt="" coords="376,5,603,35"/>
-<area shape="rect" id="node4" href="$classDeck.html#a5ca484cc79e48486fd6a2ba08c78954e" title="Вытаскивает карту события." alt="" coords="400,59,579,88"/>
-</map>

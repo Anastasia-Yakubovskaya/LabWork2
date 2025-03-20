@@ -1,5 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title="Тест для проверки получения урона объектом в ячейке." alt="" coords="5,32,69,61"/>
-<area shape="rect" id="node2" href="$classCell.html#a4bd229b8c8c991b2e26bebed14b81dbd" title="Размещает объект в ячейке." alt="" coords="143,5,242,35"/>
-<area shape="rect" id="node3" href="$classCell.html#a2283ff9f8243f22ed3dca831639168cc" title="Наносит урон ячейке." alt="" coords="117,59,268,88"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="EconomicEvent::trigger" name="EconomicEvent::trigger">
-<area shape="rect" id="node1" title="Активирует экономическое событие." alt="" coords="5,5,192,35"/>
-<area shape="rect" id="node2" href="$classCharacteristic.html#a2e23fb99809e0601b483bb8744487851" title="Применяет эффект характеристики." alt="" coords="240,5,447,35"/>
-</map>

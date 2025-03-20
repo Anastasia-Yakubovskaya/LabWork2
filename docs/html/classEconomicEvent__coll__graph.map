@@ -1,5 +1,0 @@
-<map id="EconomicEvent" name="EconomicEvent">
-<area shape="rect" id="node1" title="Класс, представляющий экономическое событие." alt="" coords="5,341,163,461"/>
-<area shape="rect" id="node2" href="$classEventCard.html" title="Класс, представляющий карту события." alt="" coords="23,191,145,293"/>
-<area shape="rect" id="node3" href="$classCard.html" title="Базовый класс для карт." alt="" coords="27,5,141,143"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="ConstructionCard::play" name="ConstructionCard::play">
-<area shape="rect" id="node1" title="Играет строительную карту." alt="" coords="5,5,191,35"/>
-<area shape="rect" id="node2" href="$classCharacteristic.html#a2e23fb99809e0601b483bb8744487851" title="Применяет эффект характеристики." alt="" coords="239,5,445,35"/>
-</map>

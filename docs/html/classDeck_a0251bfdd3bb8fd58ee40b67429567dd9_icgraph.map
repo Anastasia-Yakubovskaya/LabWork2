@@ -1,5 +1,0 @@
-<map id="Deck::addCard" name="Deck::addCard">
-<area shape="rect" id="node1" title="Добавляет карту в колоду." alt="" coords="169,32,299,61"/>
-<area shape="rect" id="node2" href="$classGame.html#ad59df6562a58a614fda24622d3715b65" title="Конструктор класса Game." alt="" coords="5,5,121,35"/>
-<area shape="rect" id="node3" href="$testai_8cpp.html#a708137f05527fb32ec8290fcf8b3df5b" title="Тест для проверки размещения объекта AI на доске." alt="" coords="31,59,95,88"/>
-</map>

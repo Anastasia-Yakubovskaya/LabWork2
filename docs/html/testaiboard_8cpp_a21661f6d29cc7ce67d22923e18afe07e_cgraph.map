@@ -1,9 +1,0 @@
-<map id="TEST" name="TEST">
-<area shape="rect" id="node1" title="Тест для проверки интеграции AI и Board." alt="" coords="5,59,69,88"/>
-<area shape="rect" id="node2" href="$classDeck.html#a0251bfdd3bb8fd58ee40b67429567dd9" title="Добавляет карту в колоду." alt="" coords="132,5,261,35"/>
-<area shape="rect" id="node3" href="$classAI.html#a1c36df63fe947d70bb8743ed6233aa18" title="Берет карту из колоды." alt="" coords="139,59,254,88"/>
-<area shape="rect" id="node6" href="$classBoard.html#a27a1a78ef9fdd5f22e2036bc3d609a43" title="Размещает объект на игровом поле." alt="" coords="117,112,276,141"/>
-<area shape="rect" id="node4" href="$classDeck.html#a044311930dc24ddf9e659ce69c768caa" title="Вытаскивает строительную карту." alt="" coords="324,5,551,35"/>
-<area shape="rect" id="node5" href="$classDeck.html#a5ca484cc79e48486fd6a2ba08c78954e" title="Вытаскивает карту события." alt="" coords="348,59,527,88"/>
-<area shape="rect" id="node7" href="$classBoard.html#aee9a2d0787cca126de34c19c195ac5a3" title="Проверяет, пуста ли ячейка." alt="" coords="358,112,517,141"/>
-</map>

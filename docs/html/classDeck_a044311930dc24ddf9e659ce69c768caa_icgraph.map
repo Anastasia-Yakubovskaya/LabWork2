@@ -1,8 +1,0 @@
-<map id="Deck::drawConstructionCard" name="Deck::drawConstructionCard">
-<area shape="rect" id="node1" title="Вытаскивает строительную карту." alt="" coords="312,59,539,88"/>
-<area shape="rect" id="node2" href="$classAI.html#a1c36df63fe947d70bb8743ed6233aa18" title="Берет карту из колоды." alt="" coords="133,32,248,61"/>
-<area shape="rect" id="node5" href="$classPlayer.html#a3ef87a3e79e536318681d1685e2e48be" title="Тянет карту из колоды." alt="" coords="117,85,264,115"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Основная функция программы." alt="" coords="9,59,66,88"/>
-<area shape="rect" id="node4" href="$testai_8cpp.html#a708137f05527fb32ec8290fcf8b3df5b" title="Тест для проверки размещения объекта AI на доске." alt="" coords="5,5,69,35"/>
-<area shape="rect" id="node6" href="$testgame_8cpp.html#ae00fa56e2650478853627da058c1b959" title="Тест для проверки полного цикла игры." alt="" coords="5,112,69,141"/>
-</map>

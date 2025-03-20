@@ -1,5 +1,0 @@
-<map id="Game::Game" name="Game::Game">
-<area shape="rect" id="node1" title="Конструктор класса Game." alt="" coords="5,32,121,61"/>
-<area shape="rect" id="node2" href="$classDeck.html#a0251bfdd3bb8fd58ee40b67429567dd9" title="Добавляет карту в колоду." alt="" coords="169,5,299,35"/>
-<area shape="rect" id="node3" href="$classDeck.html#ae5a1e52ab00ae5924f2bc6b730dba3eb" title="Перемешивает колоду карт." alt="" coords="177,59,291,88"/>
-</map>

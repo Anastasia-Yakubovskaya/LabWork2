@@ -1,7 +1,0 @@
-<map id="VarEvent" name="VarEvent">
-<area shape="rect" id="node1" title="Класс, представляющий событие с переменной величиной." alt="" coords="91,411,201,513"/>
-<area shape="rect" id="node2" href="$classBonusCard.html" title="Класс, представляющий бонусную карту." alt="" coords="5,225,132,328"/>
-<area shape="rect" id="node3" href="$classCard.html" title="Базовый класс для карт." alt="" coords="12,5,125,143"/>
-<area shape="rect" id="node4" href="$classPlayerBase.html" title="Базовый класс для игроков." alt="" coords="156,208,293,345"/>
-<area shape="rect" id="node5" href="$classCharacteristic.html" title="Класс, представляющий характеристику." alt="" coords="153,23,296,125"/>
-</map>

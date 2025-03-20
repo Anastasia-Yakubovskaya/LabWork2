@@ -1,6 +1,0 @@
-<map id="Deck::drawBonusCard" name="Deck::drawBonusCard">
-<area shape="rect" id="node1" title="Вытаскивает бонусную карту." alt="" coords="351,32,533,61"/>
-<area shape="rect" id="node2" href="$classAI.html#a3e3d4a8b6175aeec8743ca0f7fad8275" title="Берет бонусную карту из колоды." alt="" coords="126,5,287,35"/>
-<area shape="rect" id="node4" href="$classPlayer.html#ac5061e3aacd98e0573121e4ce8563c85" title="Тянет бонусную карту из колоды." alt="" coords="111,59,303,88"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Основная функция программы." alt="" coords="5,32,63,61"/>
-</map>

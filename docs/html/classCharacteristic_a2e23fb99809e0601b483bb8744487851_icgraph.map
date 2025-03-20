@@ -1,7 +1,0 @@
-<map id="Characteristic::applyEffect" name="Characteristic::applyEffect">
-<area shape="rect" id="node1" title="Применяет эффект характеристики." alt="" coords="240,85,447,115"/>
-<area shape="rect" id="node2" href="$classConstructionCard.html#adea764e7bf3e13d3ec2b764ba1dee477" title="Играет строительную карту." alt="" coords="6,5,191,35"/>
-<area shape="rect" id="node3" href="$testcharacteristic_8cpp.html#a41e58502ec748cd23f4c51c9189c63e9" title="Тест для проверки применения эффекта характеристики." alt="" coords="67,59,131,88"/>
-<area shape="rect" id="node4" href="$classPoliticalEvent.html#aefc65c52a92d6c9c9ca7b677659d3dc9" title="Активирует политическое событие." alt="" coords="12,112,185,141"/>
-<area shape="rect" id="node5" href="$classEconomicEvent.html#a2ea9dc47968aefd2e0aac7ac47f844a4" title="Активирует экономическое событие." alt="" coords="5,165,192,195"/>
-</map>

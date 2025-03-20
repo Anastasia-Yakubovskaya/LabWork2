@@ -1,4 +1,0 @@
-<map id="Board::display" name="Board::display">
-<area shape="rect" id="node1" title="Отображает игровое поле." alt="" coords="5,5,129,35"/>
-<area shape="rect" id="node2" href="$classGraphics.html#a5ae1d3b63bc0284b0dc0d5e0aead8325" title="Отображает игровое поле." alt="" coords="177,5,365,35"/>
-</map>
