@@ -1,0 +1,195 @@
+\hypertarget{classNaturalDisaster}{}\doxysection{Natural\+Disaster Class Reference}
+\label{classNaturalDisaster}\index{NaturalDisaster@{NaturalDisaster}}
+
+
+Класс, представляющий природное бедствие.  
+
+
+
+
+{\ttfamily \#include $<$naturaldisaster.\+h$>$}
+
+
+
+Inheritance diagram for Natural\+Disaster\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classNaturalDisaster__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Natural\+Disaster\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classNaturalDisaster__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNaturalDisaster_aa75a75c42730cf3767f1eefa521c3873}{Natural\+Disaster}} (const std\+::string \&\mbox{\hyperlink{classNaturalDisaster_a3ce517ceb2dc28e1e0fdb86aac441d86}{type}}, int \mbox{\hyperlink{classNaturalDisaster_a5f7f28370b12ec9d6ac7049a0e55009f}{damage}})
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classNaturalDisaster}{Natural\+Disaster}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNaturalDisaster_abb9e5f1e1fe2d01a8a610b1a781d7674}{trigger}} (\mbox{\hyperlink{classBoard}{Board}} \&board, int \&score, const \mbox{\hyperlink{classCharacteristic}{Characteristic}} \&characteristic, const std\+::string \&player\+Prefix)
+\begin{DoxyCompactList}\small\item\em Активирует природное бедствие. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classNaturalDisaster_a3ce517ceb2dc28e1e0fdb86aac441d86}{type}}
+\begin{DoxyCompactList}\small\item\em Тип природного бедствия. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNaturalDisaster_a5f7f28370b12ec9d6ac7049a0e55009f}{damage}}
+\begin{DoxyCompactList}\small\item\em Урон, наносимый природным бедствием. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, представляющий природное бедствие. 
+
+Этот класс наследует от класса \mbox{\hyperlink{classEventCard}{Event\+Card}} и представляет карту события, связанного с природным бедствием, которое может нанести урон игрокам или игровому полю. 
+
+Definition at line 15 of file naturaldisaster.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNaturalDisaster_aa75a75c42730cf3767f1eefa521c3873}\label{classNaturalDisaster_aa75a75c42730cf3767f1eefa521c3873}} 
+\index{NaturalDisaster@{NaturalDisaster}!NaturalDisaster@{NaturalDisaster}}
+\index{NaturalDisaster@{NaturalDisaster}!NaturalDisaster@{NaturalDisaster}}
+\doxysubsubsection{\texorpdfstring{NaturalDisaster()}{NaturalDisaster()}}
+{\footnotesize\ttfamily Natural\+Disaster\+::\+Natural\+Disaster (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type,  }\item[{int}]{damage }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \mbox{\hyperlink{classNaturalDisaster}{Natural\+Disaster}}. 
+
+Этот конструктор инициализирует тип природного бедствия и его урон.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Тип природного бедствия. \\
+\hline
+{\em damage} & Урон, наносимый природным бедствием.\\
+\hline
+\end{DoxyParams}
+Инициализирует карту природного бедствия с указанным типом и уроном.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Тип природного бедствия (например, \char`\"{}\+Earthquake\char`\"{}, \char`\"{}\+Flood\char`\"{}). \\
+\hline
+{\em damage} & Урон, который наносит бедствие зданиям. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file Natural\+Disaster.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNaturalDisaster_abb9e5f1e1fe2d01a8a610b1a781d7674}\label{classNaturalDisaster_abb9e5f1e1fe2d01a8a610b1a781d7674}} 
+\index{NaturalDisaster@{NaturalDisaster}!trigger@{trigger}}
+\index{trigger@{trigger}!NaturalDisaster@{NaturalDisaster}}
+\doxysubsubsection{\texorpdfstring{trigger()}{trigger()}}
+{\footnotesize\ttfamily void Natural\+Disaster\+::trigger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoard}{Board}} \&}]{board,  }\item[{int \&}]{score,  }\item[{const \mbox{\hyperlink{classCharacteristic}{Characteristic}} \&}]{characteristic,  }\item[{const std\+::string \&}]{player\+Prefix }\end{DoxyParamCaption})}
+
+
+
+Активирует природное бедствие. 
+
+Активирует эффект природного бедствия.
+
+Этот метод применяет эффект природного бедствия к игровому полю и обновляет счет игрока.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Ссылка на игровую доску, к которой будет применено бедствие. \\
+\hline
+{\em score} & Ссылка на счет игрока, который может быть изменен. \\
+\hline
+{\em characteristic} & Характеристика, к которой будет применен эффект. \\
+\hline
+{\em player\+Prefix} & Префикс игрока, для отображения информации.\\
+\hline
+\end{DoxyParams}
+Этот метод наносит урон всем зданиям на игровом поле, принадлежащим указанному игроку. Урон применяется только к тем ячейкам, которые содержат префикс игрока.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Игровое поле, на котором находятся здания. \\
+\hline
+{\em score} & Счет игрока (не используется в данном методе). \\
+\hline
+{\em characteristic} & Характеристика игрока (не используется в данном методе). \\
+\hline
+{\em player\+Prefix} & Префикс игрока, определяющий принадлежность зданий (например, \char`\"{}1\char`\"{} для игрока, \char`\"{}2\char`\"{} для ИИ). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file Natural\+Disaster.\+cpp.
+
+
+
+References damage, Board\+::grid, Board\+::size, and type.
+
+
+
+Referenced by TEST().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classNaturalDisaster_abb9e5f1e1fe2d01a8a610b1a781d7674_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classNaturalDisaster_a5f7f28370b12ec9d6ac7049a0e55009f}\label{classNaturalDisaster_a5f7f28370b12ec9d6ac7049a0e55009f}} 
+\index{NaturalDisaster@{NaturalDisaster}!damage@{damage}}
+\index{damage@{damage}!NaturalDisaster@{NaturalDisaster}}
+\doxysubsubsection{\texorpdfstring{damage}{damage}}
+{\footnotesize\ttfamily int Natural\+Disaster\+::damage}
+
+
+
+Урон, наносимый природным бедствием. 
+
+
+
+Definition at line 21 of file naturaldisaster.\+h.
+
+
+
+Referenced by trigger().
+
+\mbox{\Hypertarget{classNaturalDisaster_a3ce517ceb2dc28e1e0fdb86aac441d86}\label{classNaturalDisaster_a3ce517ceb2dc28e1e0fdb86aac441d86}} 
+\index{NaturalDisaster@{NaturalDisaster}!type@{type}}
+\index{type@{type}!NaturalDisaster@{NaturalDisaster}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily std\+::string Natural\+Disaster\+::type}
+
+
+
+Тип природного бедствия. 
+
+
+
+Definition at line 18 of file naturaldisaster.\+h.
+
+
+
+Referenced by trigger().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{naturaldisaster_8h}{naturaldisaster.\+h}}\item 
+src/\mbox{\hyperlink{NaturalDisaster_8cpp}{Natural\+Disaster.\+cpp}}\end{DoxyCompactItemize}

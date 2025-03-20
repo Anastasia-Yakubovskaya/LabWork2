@@ -1,0 +1,49 @@
+\hypertarget{testgame_8cpp}{}\doxysection{tests/testgame.cpp File Reference}
+\label{testgame_8cpp}\index{tests/testgame.cpp@{tests/testgame.cpp}}
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ai.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}playerbase.\+h\char`\"{}}\newline
+Include dependency graph for testgame.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{testgame_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{testgame_8cpp_ae00fa56e2650478853627da058c1b959}{TEST}} (Game\+System\+Test, Full\+Game\+Cycle)
+\begin{DoxyCompactList}\small\item\em Тест для проверки полного цикла игры. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{testgame_8cpp_ae00fa56e2650478853627da058c1b959}\label{testgame_8cpp_ae00fa56e2650478853627da058c1b959}} 
+\index{testgame.cpp@{testgame.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!testgame.cpp@{testgame.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Game\+System\+Test}]{,  }\item[{Full\+Game\+Cycle}]{ }\end{DoxyParamCaption})}
+
+
+
+Тест для проверки полного цикла игры. 
+
+Этот тест проверяет, что игра корректно инициализируется и прогрессирует, включая ходы игрока и \mbox{\hyperlink{classAI}{AI}}. Также проверяется, что колода карт не пуста после нескольких ходов. 
+
+Definition at line 14 of file testgame.\+cpp.
+
+
+
+References Game\+::deck, AI\+::draw\+Card(), Player\+::draw\+Card(), Deck\+::get\+Remaining\+Cards(), and Game\+::start\+Game().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{testgame_8cpp_ae00fa56e2650478853627da058c1b959_cgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,5 @@
+<map id="StealCardEvent" name="StealCardEvent">
+<area shape="rect" id="node1" title="Класс, представляющий событие кражи карты." alt="" coords="5,341,164,461"/>
+<area shape="rect" id="node2" href="$classBonusCard.html" title="Класс, представляющий бонусную карту." alt="" coords="21,191,148,293"/>
+<area shape="rect" id="node3" href="$classCard.html" title="Базовый класс для карт." alt="" coords="28,5,141,143"/>
+</map>

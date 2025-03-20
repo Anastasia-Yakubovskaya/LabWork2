@@ -1,0 +1,4 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node1" title="Тест для проверки применения эффекта характеристики." alt="" coords="5,5,69,35"/>
+<area shape="rect" id="node2" href="$classCharacteristic.html#a2e23fb99809e0601b483bb8744487851" title="Применяет эффект характеристики." alt="" coords="117,5,324,35"/>
+</map>

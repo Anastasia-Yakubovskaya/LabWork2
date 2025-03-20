@@ -1,0 +1,4 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node1" title="Тест для проверки отображения игрового поля." alt="" coords="5,5,69,35"/>
+<area shape="rect" id="node2" href="$classGraphics.html#a5ae1d3b63bc0284b0dc0d5e0aead8325" title="Отображает игровое поле." alt="" coords="117,5,305,35"/>
+</map>

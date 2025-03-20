@@ -1,0 +1,12 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classCard.html" title="Базовый класс для карт." alt="" coords="5,125,63,155"/>
+<area shape="rect" id="node2" href="$classBonusCard.html" title="Класс, представляющий бонусную карту." alt="" coords="133,65,235,95"/>
+<area shape="rect" id="node6" href="$classConstructionCard.html" title="Класс, представляющий строительную карту." alt="" coords="111,125,257,155"/>
+<area shape="rect" id="node7" href="$classEventCard.html" title="Класс, представляющий карту события." alt="" coords="135,192,233,221"/>
+<area shape="rect" id="node3" href="$classStealCardEvent.html" title="Класс, представляющий событие кражи карты." alt="" coords="305,5,440,35"/>
+<area shape="rect" id="node4" href="$classTradeEvent.html" title="Класс, представляющий событие торговли." alt="" coords="321,59,425,88"/>
+<area shape="rect" id="node5" href="$classVarEvent.html" title="Класс, представляющий событие с переменной величиной." alt="" coords="329,112,416,141"/>
+<area shape="rect" id="node8" href="$classEconomicEvent.html" title="Класс, представляющий экономическое событие." alt="" coords="305,165,440,195"/>
+<area shape="rect" id="node9" href="$classNaturalDisaster.html" title="Класс, представляющий природное бедствие." alt="" coords="306,219,439,248"/>
+<area shape="rect" id="node10" href="$classPoliticalEvent.html" title="Класс, представляющий политическое событие." alt="" coords="313,272,433,301"/>
+</map>

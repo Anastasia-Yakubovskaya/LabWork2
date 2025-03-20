@@ -1,0 +1,167 @@
+\hypertarget{classVarEvent}{}\doxysection{Var\+Event Class Reference}
+\label{classVarEvent}\index{VarEvent@{VarEvent}}
+
+
+Класс, представляющий событие с переменной величиной.  
+
+
+
+
+{\ttfamily \#include $<$varevent.\+h$>$}
+
+
+
+Inheritance diagram for Var\+Event\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classVarEvent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Var\+Event\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classVarEvent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVarEvent_a6cb7f5901417379c0db740b5bdd2193a}{Var\+Event}} (const std\+::string \&\mbox{\hyperlink{classCard_a1f5013054990456125c82d805744062f}{name}}, const std\+::string \&\mbox{\hyperlink{classCard_aa1c11255159b8ac2243398487a2ac00a}{description}}, \mbox{\hyperlink{classPlayerBase}{Player\+Base}} $\ast$\mbox{\hyperlink{classVarEvent_aaedd80a70147173efb49758373499411}{target}}, int \mbox{\hyperlink{classVarEvent_ae66583b2e14dbd3c541dcab45b378eae}{damage}})
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classVarEvent}{Var\+Event}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVarEvent_a8bcd15aa024c4922d27c33127e095b44}{trigger}} ()
+\begin{DoxyCompactList}\small\item\em Активирует событие. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayerBase}{Player\+Base}} $\ast$ \mbox{\hyperlink{classVarEvent_aaedd80a70147173efb49758373499411}{target}}
+\begin{DoxyCompactList}\small\item\em Указатель на игрока, который является целью события. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classVarEvent_ae66583b2e14dbd3c541dcab45b378eae}{damage}}
+\begin{DoxyCompactList}\small\item\em Урон, который будет нанесен целевому игроку. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, представляющий событие с переменной величиной. 
+
+Этот класс наследует от класса \mbox{\hyperlink{classBonusCard}{Bonus\+Card}} и представляет событие, которое может нанести урон целевому игроку. 
+
+Definition at line 14 of file varevent.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVarEvent_a6cb7f5901417379c0db740b5bdd2193a}\label{classVarEvent_a6cb7f5901417379c0db740b5bdd2193a}} 
+\index{VarEvent@{VarEvent}!VarEvent@{VarEvent}}
+\index{VarEvent@{VarEvent}!VarEvent@{VarEvent}}
+\doxysubsubsection{\texorpdfstring{VarEvent()}{VarEvent()}}
+{\footnotesize\ttfamily Var\+Event\+::\+Var\+Event (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{description,  }\item[{\mbox{\hyperlink{classPlayerBase}{Player\+Base}} $\ast$}]{target,  }\item[{int}]{damage }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \mbox{\hyperlink{classVarEvent}{Var\+Event}}. 
+
+Этот конструктор инициализирует событие с заданным именем, описанием, целью и величиной урона.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Имя события. \\
+\hline
+{\em description} & Описание события. \\
+\hline
+{\em target} & Указатель на игрока, который является целью события. \\
+\hline
+{\em damage} & Величина урона, который будет нанесен.\\
+\hline
+\end{DoxyParams}
+Инициализирует карту события с переменным эффектом (\mbox{\hyperlink{classVarEvent}{Var\+Event}}) с указанным названием, описанием, целью и уроном.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Название карты (например, \char`\"{}\+Var Event\char`\"{}). \\
+\hline
+{\em description} & Описание карты (например, \char`\"{}\+Decreases target player\textquotesingle{}s score\char`\"{}). \\
+\hline
+{\em target} & Указатель на игрока, который является целью события. \\
+\hline
+{\em damage} & Урон, который наносится счету целевого игрока. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file Var\+Event.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVarEvent_a8bcd15aa024c4922d27c33127e095b44}\label{classVarEvent_a8bcd15aa024c4922d27c33127e095b44}} 
+\index{VarEvent@{VarEvent}!trigger@{trigger}}
+\index{trigger@{trigger}!VarEvent@{VarEvent}}
+\doxysubsubsection{\texorpdfstring{trigger()}{trigger()}}
+{\footnotesize\ttfamily void Var\+Event\+::trigger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Активирует событие. 
+
+Активирует эффект карты \mbox{\hyperlink{classVarEvent}{Var\+Event}}.
+
+Этот метод выполняет логику события, нанося урон целевому игроку.
+
+Этот метод уменьшает счет целевого игрока на указанное значение урона. Если цель не установлена, выводится сообщение об ошибке. 
+
+Definition at line 25 of file Var\+Event.\+cpp.
+
+
+
+References damage, Card\+::name, Player\+Base\+::name, Player\+Base\+::score, and target.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classVarEvent_ae66583b2e14dbd3c541dcab45b378eae}\label{classVarEvent_ae66583b2e14dbd3c541dcab45b378eae}} 
+\index{VarEvent@{VarEvent}!damage@{damage}}
+\index{damage@{damage}!VarEvent@{VarEvent}}
+\doxysubsubsection{\texorpdfstring{damage}{damage}}
+{\footnotesize\ttfamily int Var\+Event\+::damage}
+
+
+
+Урон, который будет нанесен целевому игроку. 
+
+
+
+Definition at line 20 of file varevent.\+h.
+
+
+
+Referenced by trigger().
+
+\mbox{\Hypertarget{classVarEvent_aaedd80a70147173efb49758373499411}\label{classVarEvent_aaedd80a70147173efb49758373499411}} 
+\index{VarEvent@{VarEvent}!target@{target}}
+\index{target@{target}!VarEvent@{VarEvent}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayerBase}{Player\+Base}}$\ast$ Var\+Event\+::target}
+
+
+
+Указатель на игрока, который является целью события. 
+
+
+
+Definition at line 17 of file varevent.\+h.
+
+
+
+Referenced by trigger().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{varevent_8h}{varevent.\+h}}\item 
+src/\mbox{\hyperlink{VarEvent_8cpp}{Var\+Event.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="BonusCard" name="BonusCard">
+<area shape="rect" id="node1" title="Класс, представляющий бонусную карту." alt="" coords="5,191,132,293"/>
+<area shape="rect" id="node2" href="$classCard.html" title="Базовый класс для карт." alt="" coords="12,5,125,143"/>
+</map>

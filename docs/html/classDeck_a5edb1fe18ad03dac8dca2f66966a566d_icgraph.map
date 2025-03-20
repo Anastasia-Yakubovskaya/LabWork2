@@ -1,0 +1,4 @@
+<map id="Deck::getRemainingCards" name="Deck::getRemainingCards">
+<area shape="rect" id="node1" title="Получает количество оставшихся карт в колоде." alt="" coords="117,5,328,35"/>
+<area shape="rect" id="node2" href="$testgame_8cpp.html#ae00fa56e2650478853627da058c1b959" title="Тест для проверки полного цикла игры." alt="" coords="5,5,69,35"/>
+</map>

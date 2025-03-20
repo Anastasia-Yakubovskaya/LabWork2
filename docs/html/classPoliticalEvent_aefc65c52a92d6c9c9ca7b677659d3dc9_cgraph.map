@@ -1,0 +1,4 @@
+<map id="PoliticalEvent::trigger" name="PoliticalEvent::trigger">
+<area shape="rect" id="node1" title="Активирует политическое событие." alt="" coords="5,5,179,35"/>
+<area shape="rect" id="node2" href="$classCharacteristic.html#a2e23fb99809e0601b483bb8744487851" title="Применяет эффект характеристики." alt="" coords="227,5,433,35"/>
+</map>

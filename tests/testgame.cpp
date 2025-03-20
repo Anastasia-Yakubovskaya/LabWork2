@@ -4,18 +4,24 @@
 #include "player.h"
 #include "playerbase.h"
 
-TEST(GameSystemTest, FullGameCycle) {
+/**
+ * @brief Тест для проверки полного цикла игры.
+ *
+ * Этот тест проверяет, что игра корректно инициализируется и прогрессирует,
+ * включая ходы игрока и AI. Также проверяется, что колода карт не пуста после
+ * нескольких ходов.
+ */
+TEST(GameSystemTest, FullGameCycle)
+{
+
     Game game;
     game.startGame();
 
-    // Simulate player and AI turns
     Player player("Player1", Characteristic("None"));
     AI ai("AI", Characteristic("None"));
 
-    // Simulate a few moves
     player.drawCard(game.deck, true);
     ai.drawCard(game.deck, true);
 
-    // Check if the game progresses correctly
     EXPECT_TRUE(game.deck.getRemainingCards() > 0);
 }

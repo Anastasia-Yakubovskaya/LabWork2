@@ -1,0 +1,5 @@
+<map id="NaturalDisaster" name="NaturalDisaster">
+<area shape="rect" id="node1" title="Класс, представляющий природное бедствие." alt="" coords="5,341,161,461"/>
+<area shape="rect" id="node2" href="$classEventCard.html" title="Класс, представляющий карту события." alt="" coords="23,191,144,293"/>
+<area shape="rect" id="node3" href="$classCard.html" title="Базовый класс для карт." alt="" coords="27,5,140,143"/>
+</map>

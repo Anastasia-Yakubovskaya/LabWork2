@@ -1,0 +1,7 @@
+<map id="EventCard" name="EventCard">
+<area shape="rect" id="node1" title="Класс, представляющий карту события." alt="" coords="205,191,326,293"/>
+<area shape="rect" id="node3" href="$classEconomicEvent.html" title="Класс, представляющий экономическое событие." alt="" coords="5,341,163,461"/>
+<area shape="rect" id="node4" href="$classNaturalDisaster.html" title="Класс, представляющий природное бедствие." alt="" coords="187,341,343,461"/>
+<area shape="rect" id="node5" href="$classPoliticalEvent.html" title="Класс, представляющий политическое событие." alt="" coords="367,341,510,461"/>
+<area shape="rect" id="node2" href="$classCard.html" title="Базовый класс для карт." alt="" coords="209,5,322,143"/>
+</map>

@@ -1,0 +1,193 @@
+\hypertarget{classCard}{}\doxysection{Card Class Reference}
+\label{classCard}\index{Card@{Card}}
+
+
+Базовый класс для карт.  
+
+
+
+
+{\ttfamily \#include $<$card.\+h$>$}
+
+
+
+Inheritance diagram for Card\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCard__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Card\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classCard__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCard_a5fd59bf12938f32b7ab75403055a9f33}{Card}} (const std\+::string \&\mbox{\hyperlink{classCard_a1f5013054990456125c82d805744062f}{name}}, const std\+::string \&\mbox{\hyperlink{classCard_aa1c11255159b8ac2243398487a2ac00a}{description}})
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classCard}{Card}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCard_a343fb659f59940033b5d8dc727f415d5}{play}} (int \&score, const \mbox{\hyperlink{classCharacteristic}{Characteristic}} \&characteristic)
+\begin{DoxyCompactList}\small\item\em Применяет эффект карты. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}{$\sim$\+Card}} ()=default
+\begin{DoxyCompactList}\small\item\em Виртуальный деструктор для корректного удаления производных классов. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classCard_a1f5013054990456125c82d805744062f}{name}}
+\begin{DoxyCompactList}\small\item\em Имя карты. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCard_aa1c11255159b8ac2243398487a2ac00a}{description}}
+\begin{DoxyCompactList}\small\item\em Описание карты. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Базовый класс для карт. 
+
+Этот класс представляет базовую карту, которая содержит имя и описание. Он служит основой для других типов карт, таких как бонусные карты. 
+
+Definition at line 15 of file card.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCard_a5fd59bf12938f32b7ab75403055a9f33}\label{classCard_a5fd59bf12938f32b7ab75403055a9f33}} 
+\index{Card@{Card}!Card@{Card}}
+\index{Card@{Card}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{Card()}{Card()}}
+{\footnotesize\ttfamily Card\+::\+Card (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{description }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \mbox{\hyperlink{classCard}{Card}}. 
+
+Конструктор карты.
+
+Создает объект \mbox{\hyperlink{classCard}{Card}} с заданным именем и описанием.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Имя карты. \\
+\hline
+{\em description} & Описание карты.\\
+\hline
+\end{DoxyParams}
+Этот конструктор инициализирует объект карты с заданным именем и описанием.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Имя карты. \\
+\hline
+{\em description} & Описание карты. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file Card.\+cpp.
+
+\mbox{\Hypertarget{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}\label{classCard_a24d9140b69cd7fcc6b4787350fdeb5e9}} 
+\index{Card@{Card}!````~Card@{$\sim$Card}}
+\index{````~Card@{$\sim$Card}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{$\sim$Card()}{~Card()}}
+{\footnotesize\ttfamily virtual Card\+::$\sim$\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Виртуальный деструктор для корректного удаления производных классов. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCard_a343fb659f59940033b5d8dc727f415d5}\label{classCard_a343fb659f59940033b5d8dc727f415d5}} 
+\index{Card@{Card}!play@{play}}
+\index{play@{play}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Card\+::play (\begin{DoxyParamCaption}\item[{int \&}]{score,  }\item[{const \mbox{\hyperlink{classCharacteristic}{Characteristic}} \&}]{characteristic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Применяет эффект карты. 
+
+Играет карту.
+
+Этот метод применяет эффект карты к текущему счету игрока, основываясь на характеристиках.
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & Ссылка на текущий счет игрока, который будет изменен. \\
+\hline
+{\em characteristic} & Характеристики игрока, которые могут влиять на эффект карты.\\
+\hline
+\end{DoxyParams}
+Этот метод выполняет действие, связанное с игрой карты, и выводит информацию о ней на экран.
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & Ссылка на текущий счет игрока. В данном методе не используется. \\
+\hline
+{\em characteristic} & Ссылка на характеристики, связанные с картой. В данном методе не используется. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classEventCard_a72779723983042d9b108603d9c799daa}{Event\+Card}}, \mbox{\hyperlink{classConstructionCard_adea764e7bf3e13d3ec2b764ba1dee477}{Construction\+Card}}, and \mbox{\hyperlink{classBonusCard_af840e2f9a7690ec4d930db0381a072cf}{Bonus\+Card}}.
+
+
+
+Definition at line 26 of file Card.\+cpp.
+
+
+
+References description, and name.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCard_aa1c11255159b8ac2243398487a2ac00a}\label{classCard_aa1c11255159b8ac2243398487a2ac00a}} 
+\index{Card@{Card}!description@{description}}
+\index{description@{description}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily std\+::string Card\+::description}
+
+
+
+Описание карты. 
+
+
+
+Definition at line 21 of file card.\+h.
+
+
+
+Referenced by play(), Bonus\+Card\+::play(), and Event\+Card\+::play().
+
+\mbox{\Hypertarget{classCard_a1f5013054990456125c82d805744062f}\label{classCard_a1f5013054990456125c82d805744062f}} 
+\index{Card@{Card}!name@{name}}
+\index{name@{name}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Card\+::name}
+
+
+
+Имя карты. 
+
+
+
+Definition at line 18 of file card.\+h.
+
+
+
+Referenced by AI\+::draw\+Bonus\+Card(), Player\+::draw\+Bonus\+Card(), AI\+::draw\+Card(), Player\+::draw\+Card(), main(), play(), Bonus\+Card\+::play(), Event\+Card\+::play(), Var\+Event\+::trigger(), Trade\+Event\+::trigger(), and Steal\+Card\+Event\+::trigger().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{card_8h}{card.\+h}}\item 
+src/\mbox{\hyperlink{Card_8cpp}{Card.\+cpp}}\end{DoxyCompactItemize}

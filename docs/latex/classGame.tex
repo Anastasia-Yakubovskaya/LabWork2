@@ -1,0 +1,175 @@
+\hypertarget{classGame}{}\doxysection{Game Class Reference}
+\label{classGame}\index{Game@{Game}}
+
+
+Класс, представляющий игру.  
+
+
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+
+
+Collaboration diagram for Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGame_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classGame}{Game}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_ae8638ccdb0ef3bf39a6affa30aa1258f}{start\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Запускает игру. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBoard}{Board}} \mbox{\hyperlink{classGame_af5bc546b0c766ecf2f7e008f750832ed}{board}}
+\begin{DoxyCompactList}\small\item\em Игровая доска. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDeck}{Deck}} \mbox{\hyperlink{classGame_abb82577958d4e519f96dd7383dffd656}{deck}}
+\begin{DoxyCompactList}\small\item\em Колода карт. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDice}{Dice}} \mbox{\hyperlink{classGame_a1a2dda4d5f76043478b12a565934bcc9}{dice}}
+\begin{DoxyCompactList}\small\item\em Игральные кости. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, представляющий игру. 
+
+Этот класс управляет игровым процессом, включая игровую доску, колоду карт и игральные кости. Он отвечает за инициализацию игры и ее запуск. 
+
+Definition at line 16 of file game.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGame_ad59df6562a58a614fda24622d3715b65}\label{classGame_ad59df6562a58a614fda24622d3715b65}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \mbox{\hyperlink{classGame}{Game}}. 
+
+Конструктор игры.
+
+Этот конструктор инициализирует объекты доски, колоды и игральных костей.
+
+Этот конструктор инициализирует игру, создавая колоду карт и добавляя в нее различные типы карт.
+
+В колоду добавляются карты строительства, природных катастроф, экономических событий, политических событий, событий с изменением значений и событий торговли. 
+
+Definition at line 19 of file Game.\+cpp.
+
+
+
+References Deck\+::add\+Card(), deck, and Deck\+::shuffle().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classGame_ad59df6562a58a614fda24622d3715b65_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGame_ae8638ccdb0ef3bf39a6affa30aa1258f}\label{classGame_ae8638ccdb0ef3bf39a6affa30aa1258f}} 
+\index{Game@{Game}!startGame@{startGame}}
+\index{startGame@{startGame}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily void Game\+::start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Запускает игру. 
+
+Этот метод инициализирует и запускает игровой процесс, управляя ходом игры и взаимодействием между игроками.
+
+Этот метод выводит сообщение о начале игры. 
+
+Definition at line 45 of file Game.\+cpp.
+
+
+
+Referenced by main(), and TEST().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classGame_ae8638ccdb0ef3bf39a6affa30aa1258f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classGame_af5bc546b0c766ecf2f7e008f750832ed}\label{classGame_af5bc546b0c766ecf2f7e008f750832ed}} 
+\index{Game@{Game}!board@{board}}
+\index{board@{board}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{board}{board}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBoard}{Board}} Game\+::board}
+
+
+
+Игровая доска. 
+
+
+
+Definition at line 19 of file game.\+h.
+
+
+
+Referenced by main().
+
+\mbox{\Hypertarget{classGame_abb82577958d4e519f96dd7383dffd656}\label{classGame_abb82577958d4e519f96dd7383dffd656}} 
+\index{Game@{Game}!deck@{deck}}
+\index{deck@{deck}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{deck}{deck}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDeck}{Deck}} Game\+::deck}
+
+
+
+Колода карт. 
+
+
+
+Definition at line 22 of file game.\+h.
+
+
+
+Referenced by Game(), main(), and TEST().
+
+\mbox{\Hypertarget{classGame_a1a2dda4d5f76043478b12a565934bcc9}\label{classGame_a1a2dda4d5f76043478b12a565934bcc9}} 
+\index{Game@{Game}!dice@{dice}}
+\index{dice@{dice}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{dice}{dice}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDice}{Dice}} Game\+::dice}
+
+
+
+Игральные кости. 
+
+
+
+Definition at line 25 of file game.\+h.
+
+
+
+Referenced by main().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{game_8h}{game.\+h}}\item 
+src/\mbox{\hyperlink{Game_8cpp}{Game.\+cpp}}\end{DoxyCompactItemize}

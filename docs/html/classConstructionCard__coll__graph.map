@@ -1,0 +1,4 @@
+<map id="ConstructionCard" name="ConstructionCard">
+<area shape="rect" id="node1" title="Класс, представляющий строительную карту." alt="" coords="5,191,176,311"/>
+<area shape="rect" id="node2" href="$classCard.html" title="Базовый класс для карт." alt="" coords="34,5,147,143"/>
+</map>

@@ -4,26 +4,32 @@
 #include "deck.h"
 #include "constructioncard.h" // Подключаем заголовочный файл ConstructionCard
 
-TEST(AIBoardIntegrationTest, AIPlaceObject) {
-    // Создаем объекты Board и AI
+/**
+ * @brief Тест для проверки интеграции AI и Board.
+ *
+ * Этот тест проверяет, что AI может успешно взять карту из колоды и разместить объект на доске.
+ * Также проверяется, что объект корректно размещается на указанной ячейке.
+ */
+TEST(AIBoardIntegrationTest, AIPlaceObject)
+{
+
     Board board;
     AI ai("AI", Characteristic("None"));
 
-    // Создаем объект Deck
+
     Deck deck;
 
-    // Инициализируем колоду (если нужно)
-    // Например, добавляем несколько карт
-    deck.addCard(new ConstructionCard("House", -5)); // Создаем карту строительства "House"
-    deck.addCard(new ConstructionCard("Tree", -3));  // Создаем карту строительства "Tree"
 
-    // AI берет карту из колоды
-    ai.drawCard(deck, true); // Рисуем карту строительства
+    deck.addCard(new ConstructionCard("House", -5));
+    deck.addCard(new ConstructionCard("Tree", -3));
 
-    // Симулируем размещение объекта AI на доске
+
+    ai.drawCard(deck, true);
+
+
     board.placeObject(5, 5, "Tree2", 40);
 
-    // Проверяем, что объект размещен корректно
+
     EXPECT_TRUE(board.grid[5][5].isOccupied);
     EXPECT_EQ(board.grid[5][5].content, "Tree2");
 }

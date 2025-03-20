@@ -1,0 +1,155 @@
+\hypertarget{classCharacteristic}{}\doxysection{Characteristic Class Reference}
+\label{classCharacteristic}\index{Characteristic@{Characteristic}}
+
+
+Класс, представляющий характеристику.  
+
+
+
+
+{\ttfamily \#include $<$characteristic.\+h$>$}
+
+
+
+Collaboration diagram for Characteristic\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classCharacteristic__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacteristic_ab9dc574ffbe325c0b46e9ba20a5a73bb}{Characteristic}} (const std\+::string \&\mbox{\hyperlink{classCharacteristic_a29893f3c11b1705f607308485acb8ac5}{type}})
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classCharacteristic}{Characteristic}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacteristic_a2e23fb99809e0601b483bb8744487851}{apply\+Effect}} (int \&score, int change) const
+\begin{DoxyCompactList}\small\item\em Применяет эффект характеристики. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classCharacteristic_a29893f3c11b1705f607308485acb8ac5}{type}}
+\begin{DoxyCompactList}\small\item\em Тип характеристики (например, \char`\"{}сила\char`\"{}, \char`\"{}ловкость\char`\"{} и т.\+д.). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, представляющий характеристику. 
+
+Этот класс представляет характеристику, которая может применяться к игроку или объекту, изменяя их состояние. 
+
+Definition at line 13 of file characteristic.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCharacteristic_ab9dc574ffbe325c0b46e9ba20a5a73bb}\label{classCharacteristic_ab9dc574ffbe325c0b46e9ba20a5a73bb}} 
+\index{Characteristic@{Characteristic}!Characteristic@{Characteristic}}
+\index{Characteristic@{Characteristic}!Characteristic@{Characteristic}}
+\doxysubsubsection{\texorpdfstring{Characteristic()}{Characteristic()}}
+{\footnotesize\ttfamily Characteristic\+::\+Characteristic (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \mbox{\hyperlink{classCharacteristic}{Characteristic}}. 
+
+Конструктор характеристики.
+
+Создает объект \mbox{\hyperlink{classCharacteristic}{Characteristic}} с заданным типом.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Тип характеристики.\\
+\hline
+\end{DoxyParams}
+Этот конструктор инициализирует объект характеристики с заданным типом.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Тип характеристики, определяющий ее эффект. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 12 of file Characteristic.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCharacteristic_a2e23fb99809e0601b483bb8744487851}\label{classCharacteristic_a2e23fb99809e0601b483bb8744487851}} 
+\index{Characteristic@{Characteristic}!applyEffect@{applyEffect}}
+\index{applyEffect@{applyEffect}!Characteristic@{Characteristic}}
+\doxysubsubsection{\texorpdfstring{applyEffect()}{applyEffect()}}
+{\footnotesize\ttfamily void Characteristic\+::apply\+Effect (\begin{DoxyParamCaption}\item[{int \&}]{score,  }\item[{int}]{change }\end{DoxyParamCaption}) const}
+
+
+
+Применяет эффект характеристики. 
+
+Применяет эффект характеристики к счету.
+
+Этот метод изменяет текущий счет, добавляя или вычитая указанное значение.
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & Ссылка на текущий счет, который будет изменен. \\
+\hline
+{\em change} & Изменение, которое будет применено к счету.\\
+\hline
+\end{DoxyParams}
+Этот метод изменяет счет в зависимости от типа характеристики. В зависимости от типа, эффект может уменьшать урон от стихийных бедствий, снижать стоимость строительства или увеличивать количество получаемых очков.
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & Ссылка на текущий счет игрока, который будет изменен. \\
+\hline
+{\em change} & Изменение, которое будет применено к счету. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Characteristic.\+cpp.
+
+
+
+References type.
+
+
+
+Referenced by Construction\+Card\+::play(), TEST(), Political\+Event\+::trigger(), and Economic\+Event\+::trigger().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCharacteristic_a2e23fb99809e0601b483bb8744487851_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCharacteristic_a29893f3c11b1705f607308485acb8ac5}\label{classCharacteristic_a29893f3c11b1705f607308485acb8ac5}} 
+\index{Characteristic@{Characteristic}!type@{type}}
+\index{type@{type}!Characteristic@{Characteristic}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily std\+::string Characteristic\+::type}
+
+
+
+Тип характеристики (например, \char`\"{}сила\char`\"{}, \char`\"{}ловкость\char`\"{} и т.\+д.). 
+
+
+
+Definition at line 16 of file characteristic.\+h.
+
+
+
+Referenced by apply\+Effect().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{characteristic_8h}{characteristic.\+h}}\item 
+src/\mbox{\hyperlink{Characteristic_8cpp}{Characteristic.\+cpp}}\end{DoxyCompactItemize}

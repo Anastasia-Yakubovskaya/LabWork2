@@ -1,0 +1,4 @@
+<map id="Deck::shuffle" name="Deck::shuffle">
+<area shape="rect" id="node1" title="Перемешивает колоду карт." alt="" coords="169,5,284,35"/>
+<area shape="rect" id="node2" href="$classGame.html#ad59df6562a58a614fda24622d3715b65" title="Конструктор класса Game." alt="" coords="5,5,121,35"/>
+</map>

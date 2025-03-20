@@ -21,7 +21,8 @@ PDF_HYPERLINKS         = YES
 USE_PDFLATEX           = YES
 
 # Директория с исходным кодом
-INPUT                  = src
+INPUT                  = src include tests
+
 
 # Рекурсивный обход поддиректорий
 RECURSIVE              = YES

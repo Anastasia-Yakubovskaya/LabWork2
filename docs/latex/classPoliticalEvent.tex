@@ -1,0 +1,191 @@
+\hypertarget{classPoliticalEvent}{}\doxysection{Political\+Event Class Reference}
+\label{classPoliticalEvent}\index{PoliticalEvent@{PoliticalEvent}}
+
+
+Класс, представляющий политическое событие.  
+
+
+
+
+{\ttfamily \#include $<$politicalevent.\+h$>$}
+
+
+
+Inheritance diagram for Political\+Event\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classPoliticalEvent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Political\+Event\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classPoliticalEvent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPoliticalEvent_a71246b335a938a2548afdf9fb8720680}{Political\+Event}} (const std\+::string \&\mbox{\hyperlink{classPoliticalEvent_ada71c68fca7327c5ce5c6da297a5d3fb}{type}}, const std\+::string \&\mbox{\hyperlink{classPoliticalEvent_ab21c385fdf5def1b47b8dd47e6573ef3}{impact}})
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classPoliticalEvent}{Political\+Event}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPoliticalEvent_aefc65c52a92d6c9c9ca7b677659d3dc9}{trigger}} (\mbox{\hyperlink{classBoard}{Board}} \&board, int \&score, const \mbox{\hyperlink{classCharacteristic}{Characteristic}} \&characteristic, const std\+::string \&player\+Prefix)
+\begin{DoxyCompactList}\small\item\em Активирует политическое событие. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classPoliticalEvent_ada71c68fca7327c5ce5c6da297a5d3fb}{type}}
+\begin{DoxyCompactList}\small\item\em Тип политического события. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPoliticalEvent_ab21c385fdf5def1b47b8dd47e6573ef3}{impact}}
+\begin{DoxyCompactList}\small\item\em Влияние политического события. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, представляющий политическое событие. 
+
+Этот класс наследует от класса \mbox{\hyperlink{classEventCard}{Event\+Card}} и представляет карту события, связанного с политическими изменениями, которые могут оказать влияние на игру. 
+
+Definition at line 15 of file politicalevent.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPoliticalEvent_a71246b335a938a2548afdf9fb8720680}\label{classPoliticalEvent_a71246b335a938a2548afdf9fb8720680}} 
+\index{PoliticalEvent@{PoliticalEvent}!PoliticalEvent@{PoliticalEvent}}
+\index{PoliticalEvent@{PoliticalEvent}!PoliticalEvent@{PoliticalEvent}}
+\doxysubsubsection{\texorpdfstring{PoliticalEvent()}{PoliticalEvent()}}
+{\footnotesize\ttfamily Political\+Event\+::\+Political\+Event (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type,  }\item[{const std\+::string \&}]{impact }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \mbox{\hyperlink{classPoliticalEvent}{Political\+Event}}. 
+
+Этот конструктор инициализирует тип политического события и его влияние.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Тип политического события. \\
+\hline
+{\em impact} & Влияние, оказываемое политическим событием.\\
+\hline
+\end{DoxyParams}
+Инициализирует карту политического события с указанным типом и эффектом.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Тип политического события (например, \char`\"{}\+Election\char`\"{}, \char`\"{}\+Policy Change\char`\"{}). \\
+\hline
+{\em impact} & Описание эффекта события (например, \char`\"{}\+Reduces score by 25 points\char`\"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file Political\+Event.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPoliticalEvent_aefc65c52a92d6c9c9ca7b677659d3dc9}\label{classPoliticalEvent_aefc65c52a92d6c9c9ca7b677659d3dc9}} 
+\index{PoliticalEvent@{PoliticalEvent}!trigger@{trigger}}
+\index{trigger@{trigger}!PoliticalEvent@{PoliticalEvent}}
+\doxysubsubsection{\texorpdfstring{trigger()}{trigger()}}
+{\footnotesize\ttfamily void Political\+Event\+::trigger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoard}{Board}} \&}]{board,  }\item[{int \&}]{score,  }\item[{const \mbox{\hyperlink{classCharacteristic}{Characteristic}} \&}]{characteristic,  }\item[{const std\+::string \&}]{player\+Prefix }\end{DoxyParamCaption})}
+
+
+
+Активирует политическое событие. 
+
+Активирует эффект политического события.
+
+Этот метод применяет эффект политического события к игровому полю и обновляет счет игрока.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Ссылка на игровую доску, к которой будет применено событие. \\
+\hline
+{\em score} & Ссылка на счет игрока, который может быть изменен. \\
+\hline
+{\em characteristic} & Характеристика, к которой будет применен эффект. \\
+\hline
+{\em player\+Prefix} & Префикс игрока, для отображения информации.\\
+\hline
+\end{DoxyParams}
+Этот метод применяет эффект политического события ко всем зданиям на игровом поле, принадлежащим указанному игроку, и изменяет счет игрока в зависимости от его характеристики.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Игровое поле, на котором находятся здания. \\
+\hline
+{\em score} & Счет игрока, который будет изменен в зависимости от эффекта события. \\
+\hline
+{\em characteristic} & Характеристика игрока, которая влияет на применение эффекта. \\
+\hline
+{\em player\+Prefix} & Префикс игрока, определяющий принадлежность зданий (например, \char`\"{}1\char`\"{} для игрока, \char`\"{}2\char`\"{} для ИИ). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file Political\+Event.\+cpp.
+
+
+
+References Characteristic\+::apply\+Effect(), Board\+::grid, impact, Board\+::size, and type.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPoliticalEvent_aefc65c52a92d6c9c9ca7b677659d3dc9_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classPoliticalEvent_ab21c385fdf5def1b47b8dd47e6573ef3}\label{classPoliticalEvent_ab21c385fdf5def1b47b8dd47e6573ef3}} 
+\index{PoliticalEvent@{PoliticalEvent}!impact@{impact}}
+\index{impact@{impact}!PoliticalEvent@{PoliticalEvent}}
+\doxysubsubsection{\texorpdfstring{impact}{impact}}
+{\footnotesize\ttfamily std\+::string Political\+Event\+::impact}
+
+
+
+Влияние политического события. 
+
+
+
+Definition at line 21 of file politicalevent.\+h.
+
+
+
+Referenced by trigger().
+
+\mbox{\Hypertarget{classPoliticalEvent_ada71c68fca7327c5ce5c6da297a5d3fb}\label{classPoliticalEvent_ada71c68fca7327c5ce5c6da297a5d3fb}} 
+\index{PoliticalEvent@{PoliticalEvent}!type@{type}}
+\index{type@{type}!PoliticalEvent@{PoliticalEvent}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily std\+::string Political\+Event\+::type}
+
+
+
+Тип политического события. 
+
+
+
+Definition at line 18 of file politicalevent.\+h.
+
+
+
+Referenced by trigger().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{politicalevent_8h}{politicalevent.\+h}}\item 
+src/\mbox{\hyperlink{PoliticalEvent_8cpp}{Political\+Event.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="Graphics::displayBoard" name="Graphics::displayBoard">
+<area shape="rect" id="node1" title="Отображает игровое поле." alt="" coords="283,32,471,61"/>
+<area shape="rect" id="node2" href="$classBoard.html#a3e54cfa69fc7725ef04cd8200787d7a4" title="Отображает игровое поле." alt="" coords="111,5,235,35"/>
+<area shape="rect" id="node4" href="$testgraphics_8cpp.html#a9f17202fea5a630f402ebb790c471c78" title="Тест для проверки отображения игрового поля." alt="" coords="141,59,205,88"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Основная функция программы." alt="" coords="5,5,63,35"/>
+</map>

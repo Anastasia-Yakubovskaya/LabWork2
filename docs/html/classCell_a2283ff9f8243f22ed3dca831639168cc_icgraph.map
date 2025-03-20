@@ -1,0 +1,4 @@
+<map id="Cell::takeDamage" name="Cell::takeDamage">
+<area shape="rect" id="node1" title="Наносит урон ячейке." alt="" coords="117,5,268,35"/>
+<area shape="rect" id="node2" href="$testcell_8cpp.html#a0223e5a12972212201a284eecee88ed0" title="Тест для проверки получения урона объектом в ячейке." alt="" coords="5,5,69,35"/>
+</map>

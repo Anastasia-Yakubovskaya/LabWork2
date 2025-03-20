@@ -1,0 +1,6 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node1" title="Тест для проверки срабатывания стихийного бедствия." alt="" coords="5,32,69,61"/>
+<area shape="rect" id="node2" href="$classBoard.html#a27a1a78ef9fdd5f22e2036bc3d609a43" title="Размещает объект на игровом поле." alt="" coords="131,5,290,35"/>
+<area shape="rect" id="node4" href="$classNaturalDisaster.html#abb9e5f1e1fe2d01a8a610b1a781d7674" title="Активирует природное бедствие." alt="" coords="117,59,304,88"/>
+<area shape="rect" id="node3" href="$classBoard.html#aee9a2d0787cca126de34c19c195ac5a3" title="Проверяет, пуста ли ячейка." alt="" coords="352,5,511,35"/>
+</map>

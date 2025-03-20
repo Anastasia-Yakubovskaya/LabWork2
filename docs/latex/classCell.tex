@@ -1,0 +1,229 @@
+\hypertarget{classCell}{}\doxysection{Cell Class Reference}
+\label{classCell}\index{Cell@{Cell}}
+
+
+Класс, представляющий ячейку.  
+
+
+
+
+{\ttfamily \#include $<$cell.\+h$>$}
+
+
+
+Collaboration diagram for Cell\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classCell__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCell_a394510643e8664cf12b5efaf5cb99f71}{Cell}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classCell}{Cell}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCell_a4bd229b8c8c991b2e26bebed14b81dbd}{place}} (const std\+::string \&object, int \mbox{\hyperlink{classCell_af62a72f8e87b5792739c045df4a0d8c3}{health}})
+\begin{DoxyCompactList}\small\item\em Размещает объект в ячейке. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCell_a2283ff9f8243f22ed3dca831639168cc}{take\+Damage}} (int damage)
+\begin{DoxyCompactList}\small\item\em Наносит урон ячейке. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classCell_a55c1d3bce1196deeeb47ab23892b38be}{content}}
+\begin{DoxyCompactList}\small\item\em Содержимое ячейки (например, объект, находящийся в ячейке). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCell_a5df66fd94f3ea7e51924aaf41497f114}{is\+Occupied}}
+\begin{DoxyCompactList}\small\item\em Флаг, указывающий, занята ли ячейка. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCell_af62a72f8e87b5792739c045df4a0d8c3}{health}}
+\begin{DoxyCompactList}\small\item\em Уровень здоровья ячейки. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, представляющий ячейку. 
+
+Этот класс представляет ячейку, которая может содержать объект, иметь состояние занятости и уровень здоровья. 
+
+Definition at line 13 of file cell.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCell_a394510643e8664cf12b5efaf5cb99f71}\label{classCell_a394510643e8664cf12b5efaf5cb99f71}} 
+\index{Cell@{Cell}!Cell@{Cell}}
+\index{Cell@{Cell}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{Cell()}{Cell()}}
+{\footnotesize\ttfamily Cell\+::\+Cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \mbox{\hyperlink{classCell}{Cell}}. 
+
+Конструктор ячейки.
+
+Инициализирует ячейку с пустым содержимым, не занятая и с полным здоровьем.
+
+Этот конструктор инициализирует объект ячейки с пустым содержимым, статусом занятости и здоровьем. 
+
+Definition at line 10 of file Cell.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCell_a4bd229b8c8c991b2e26bebed14b81dbd}\label{classCell_a4bd229b8c8c991b2e26bebed14b81dbd}} 
+\index{Cell@{Cell}!place@{place}}
+\index{place@{place}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{place()}{place()}}
+{\footnotesize\ttfamily void Cell\+::place (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{object,  }\item[{int}]{health }\end{DoxyParamCaption})}
+
+
+
+Размещает объект в ячейке. 
+
+Устанавливает содержимое ячейки и уровень здоровья.
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & Содержимое, которое будет помещено в ячейку. \\
+\hline
+{\em health} & Уровень здоровья, который будет установлен для ячейки.\\
+\hline
+\end{DoxyParams}
+Этот метод устанавливает содержимое ячейки, обновляет статус занятости и задает здоровье объекта.
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & Строка, представляющая объект, который будет размещен в ячейке. \\
+\hline
+{\em health} & Здоровье объекта, размещаемого в ячейке. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file Cell.\+cpp.
+
+
+
+References content, health, and is\+Occupied.
+
+
+
+Referenced by TEST().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classCell_a4bd229b8c8c991b2e26bebed14b81dbd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classCell_a2283ff9f8243f22ed3dca831639168cc}\label{classCell_a2283ff9f8243f22ed3dca831639168cc}} 
+\index{Cell@{Cell}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily void Cell\+::take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage }\end{DoxyParamCaption})}
+
+
+
+Наносит урон ячейке. 
+
+Наносит урон объекту в ячейке.
+
+Уменьшает уровень здоровья ячейки на указанное количество урона.
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & Количество урона, которое будет нанесено ячейке.\\
+\hline
+\end{DoxyParams}
+Этот метод уменьшает здоровье объекта на заданное количество урона. Если здоровье объекта становится меньше или равно нулю, ячейка очищается и статус занятости устанавливается в false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & Количество урона, которое будет нанесено объекту. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file Cell.\+cpp.
+
+
+
+References content, health, and is\+Occupied.
+
+
+
+Referenced by TEST().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classCell_a2283ff9f8243f22ed3dca831639168cc_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCell_a55c1d3bce1196deeeb47ab23892b38be}\label{classCell_a55c1d3bce1196deeeb47ab23892b38be}} 
+\index{Cell@{Cell}!content@{content}}
+\index{content@{content}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{content}{content}}
+{\footnotesize\ttfamily std\+::string Cell\+::content}
+
+
+
+Содержимое ячейки (например, объект, находящийся в ячейке). 
+
+
+
+Definition at line 16 of file cell.\+h.
+
+
+
+Referenced by place(), take\+Damage(), and TEST().
+
+\mbox{\Hypertarget{classCell_af62a72f8e87b5792739c045df4a0d8c3}\label{classCell_af62a72f8e87b5792739c045df4a0d8c3}} 
+\index{Cell@{Cell}!health@{health}}
+\index{health@{health}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{health}{health}}
+{\footnotesize\ttfamily int Cell\+::health}
+
+
+
+Уровень здоровья ячейки. 
+
+
+
+Definition at line 22 of file cell.\+h.
+
+
+
+Referenced by place(), take\+Damage(), and TEST().
+
+\mbox{\Hypertarget{classCell_a5df66fd94f3ea7e51924aaf41497f114}\label{classCell_a5df66fd94f3ea7e51924aaf41497f114}} 
+\index{Cell@{Cell}!isOccupied@{isOccupied}}
+\index{isOccupied@{isOccupied}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{isOccupied}{isOccupied}}
+{\footnotesize\ttfamily bool Cell\+::is\+Occupied}
+
+
+
+Флаг, указывающий, занята ли ячейка. 
+
+
+
+Definition at line 19 of file cell.\+h.
+
+
+
+Referenced by place(), take\+Damage(), and TEST().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{cell_8h}{cell.\+h}}\item 
+src/\mbox{\hyperlink{Cell_8cpp}{Cell.\+cpp}}\end{DoxyCompactItemize}

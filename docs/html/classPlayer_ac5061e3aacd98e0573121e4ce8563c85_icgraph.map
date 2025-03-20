@@ -1,0 +1,4 @@
+<map id="Player::drawBonusCard" name="Player::drawBonusCard">
+<area shape="rect" id="node1" title="Тянет бонусную карту из колоды." alt="" coords="111,5,303,35"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Основная функция программы." alt="" coords="5,5,63,35"/>
+</map>

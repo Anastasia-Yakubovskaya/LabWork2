@@ -1,0 +1,7 @@
+<map id="BonusCard" name="BonusCard">
+<area shape="rect" id="node1" title="Класс, представляющий бонусную карту." alt="" coords="188,191,315,293"/>
+<area shape="rect" id="node3" href="$classStealCardEvent.html" title="Класс, представляющий событие кражи карты." alt="" coords="5,341,164,461"/>
+<area shape="rect" id="node4" href="$classTradeEvent.html" title="Класс, представляющий событие торговли." alt="" coords="188,341,315,461"/>
+<area shape="rect" id="node5" href="$classVarEvent.html" title="Класс, представляющий событие с переменной величиной." alt="" coords="339,341,449,461"/>
+<area shape="rect" id="node2" href="$classCard.html" title="Базовый класс для карт." alt="" coords="195,5,308,143"/>
+</map>

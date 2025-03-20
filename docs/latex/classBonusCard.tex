@@ -1,0 +1,161 @@
+\hypertarget{classBonusCard}{}\doxysection{Bonus\+Card Class Reference}
+\label{classBonusCard}\index{BonusCard@{BonusCard}}
+
+
+Класс, представляющий бонусную карту.  
+
+
+
+
+{\ttfamily \#include $<$bonuscard.\+h$>$}
+
+
+
+Inheritance diagram for Bonus\+Card\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBonusCard__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bonus\+Card\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classBonusCard__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBonusCard_ada06ae8ecb9084c64944a43955a8bfba}{Bonus\+Card}} (const std\+::string \&\mbox{\hyperlink{classCard_a1f5013054990456125c82d805744062f}{name}}, const std\+::string \&\mbox{\hyperlink{classCard_aa1c11255159b8ac2243398487a2ac00a}{description}}, const std\+::string \&\mbox{\hyperlink{classBonusCard_a857cd457320fba9fa91e276eef53e581}{bonus\+Type}})
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classBonusCard}{Bonus\+Card}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBonusCard_af840e2f9a7690ec4d930db0381a072cf}{play}} (int \&score, const \mbox{\hyperlink{classCharacteristic}{Characteristic}} \&characteristic) override
+\begin{DoxyCompactList}\small\item\em Применяет бонусную карту. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classBonusCard_a857cd457320fba9fa91e276eef53e581}{bonus\+Type}}
+\begin{DoxyCompactList}\small\item\em Тип бонуса, связанный с этой картой. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, представляющий бонусную карту. 
+
+Этот класс наследует от \mbox{\hyperlink{classCard}{Card}} и представляет бонусные карты, которые могут быть использованы игроками для получения различных преимуществ в игре. 
+
+Definition at line 14 of file bonuscard.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBonusCard_ada06ae8ecb9084c64944a43955a8bfba}\label{classBonusCard_ada06ae8ecb9084c64944a43955a8bfba}} 
+\index{BonusCard@{BonusCard}!BonusCard@{BonusCard}}
+\index{BonusCard@{BonusCard}!BonusCard@{BonusCard}}
+\doxysubsubsection{\texorpdfstring{BonusCard()}{BonusCard()}}
+{\footnotesize\ttfamily Bonus\+Card\+::\+Bonus\+Card (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{description,  }\item[{const std\+::string \&}]{bonus\+Type }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \mbox{\hyperlink{classBonusCard}{Bonus\+Card}}. 
+
+Конструктор карты бонусов.
+
+Создает объект \mbox{\hyperlink{classBonusCard}{Bonus\+Card}} с заданным именем, описанием и типом бонуса.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Имя бонусной карты. \\
+\hline
+{\em description} & Описание бонусной карты. \\
+\hline
+{\em bonus\+Type} & Тип бонуса, который предоставляет карта.\\
+\hline
+\end{DoxyParams}
+Этот конструктор инициализирует объект карты бонусов с заданным именем, описанием и типом бонуса.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Имя карты бонусов. \\
+\hline
+{\em description} & Описание карты бонусов. \\
+\hline
+{\em bonus\+Type} & Тип бонуса, связанного с картой. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file Bonus\+Card.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBonusCard_af840e2f9a7690ec4d930db0381a072cf}\label{classBonusCard_af840e2f9a7690ec4d930db0381a072cf}} 
+\index{BonusCard@{BonusCard}!play@{play}}
+\index{play@{play}!BonusCard@{BonusCard}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Bonus\+Card\+::play (\begin{DoxyParamCaption}\item[{int \&}]{score,  }\item[{const \mbox{\hyperlink{classCharacteristic}{Characteristic}} \&}]{characteristic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Применяет бонусную карту. 
+
+Играет бонусную карту.
+
+Этот метод применяет эффект бонусной карты к текущему счету игрока, основываясь на характеристиках.
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & Ссылка на текущий счет игрока, который будет изменен. \\
+\hline
+{\em characteristic} & Характеристики игрока, которые могут влиять на эффект карты.\\
+\hline
+\end{DoxyParams}
+Этот метод выполняет действие, связанное с игрой бонусной карты. В данном случае он просто выводит информацию о карте на экран.
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & Ссылка на текущий счет игрока. В данном методе не используется. \\
+\hline
+{\em characteristic} & Ссылка на характеристики, связанные с картой. В данном методе не используется. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classCard_a343fb659f59940033b5d8dc727f415d5}{Card}}.
+
+
+
+Definition at line 27 of file Bonus\+Card.\+cpp.
+
+
+
+References Card\+::description, and Card\+::name.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classBonusCard_a857cd457320fba9fa91e276eef53e581}\label{classBonusCard_a857cd457320fba9fa91e276eef53e581}} 
+\index{BonusCard@{BonusCard}!bonusType@{bonusType}}
+\index{bonusType@{bonusType}!BonusCard@{BonusCard}}
+\doxysubsubsection{\texorpdfstring{bonusType}{bonusType}}
+{\footnotesize\ttfamily std\+::string Bonus\+Card\+::bonus\+Type}
+
+
+
+Тип бонуса, связанный с этой картой. 
+
+
+
+Definition at line 17 of file bonuscard.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{bonuscard_8h}{bonuscard.\+h}}\item 
+src/\mbox{\hyperlink{BonusCard_8cpp}{Bonus\+Card.\+cpp}}\end{DoxyCompactItemize}

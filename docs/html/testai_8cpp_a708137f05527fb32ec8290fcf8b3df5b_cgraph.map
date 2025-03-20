@@ -1,0 +1,7 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="node1" title="Тест для проверки размещения объекта AI на доске." alt="" coords="5,32,69,61"/>
+<area shape="rect" id="node2" href="$classDeck.html#a0251bfdd3bb8fd58ee40b67429567dd9" title="Добавляет карту в колоду." alt="" coords="117,5,247,35"/>
+<area shape="rect" id="node3" href="$classAI.html#a1c36df63fe947d70bb8743ed6233aa18" title="Берет карту из колоды." alt="" coords="125,59,239,88"/>
+<area shape="rect" id="node4" href="$classDeck.html#a044311930dc24ddf9e659ce69c768caa" title="Вытаскивает строительную карту." alt="" coords="295,32,521,61"/>
+<area shape="rect" id="node5" href="$classDeck.html#a5ca484cc79e48486fd6a2ba08c78954e" title="Вытаскивает карту события." alt="" coords="319,85,497,115"/>
+</map>

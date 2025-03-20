@@ -1,0 +1,5 @@
+<map id="Board::calculateFinalScore" name="Board::calculateFinalScore">
+<area shape="rect" id="node1" title="Вычисляет финальный счет игрока." alt="" coords="117,32,332,61"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Основная функция программы." alt="" coords="9,5,66,35"/>
+<area shape="rect" id="node3" href="$testscoringsystm_8cpp.html#a394fb80f7931f54c8b75080cdfc87ef0" title="Тест для проверки системы подсчета очков." alt="" coords="5,59,69,88"/>
+</map>

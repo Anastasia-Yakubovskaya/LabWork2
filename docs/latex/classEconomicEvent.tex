@@ -1,0 +1,183 @@
+\hypertarget{classEconomicEvent}{}\doxysection{Economic\+Event Class Reference}
+\label{classEconomicEvent}\index{EconomicEvent@{EconomicEvent}}
+
+
+Класс, представляющий экономическое событие.  
+
+
+
+
+{\ttfamily \#include $<$economicevent.\+h$>$}
+
+
+
+Inheritance diagram for Economic\+Event\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classEconomicEvent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Economic\+Event\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classEconomicEvent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEconomicEvent_a6b58ce5499fca663a2963455ee5733cc}{Economic\+Event}} (const std\+::string \&\mbox{\hyperlink{classEconomicEvent_af95fb5dea2ac675eb31f86d96e0af3d3}{type}}, const std\+::string \&\mbox{\hyperlink{classEconomicEvent_a4be49bd7319e88f2bfbba1c8ed7d31b9}{impact}})
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classEconomicEvent}{Economic\+Event}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEconomicEvent_a2ea9dc47968aefd2e0aac7ac47f844a4}{trigger}} (int \&score, const \mbox{\hyperlink{classCharacteristic}{Characteristic}} \&characteristic)
+\begin{DoxyCompactList}\small\item\em Активирует экономическое событие. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classEconomicEvent_af95fb5dea2ac675eb31f86d96e0af3d3}{type}}
+\begin{DoxyCompactList}\small\item\em Тип экономического события. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classEconomicEvent_a4be49bd7319e88f2bfbba1c8ed7d31b9}{impact}}
+\begin{DoxyCompactList}\small\item\em Воздействие экономического события. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, представляющий экономическое событие. 
+
+Этот класс наследует от класса \mbox{\hyperlink{classEventCard}{Event\+Card}} и представляет экономическое событие с определенным типом и воздействием. 
+
+Definition at line 13 of file economicevent.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEconomicEvent_a6b58ce5499fca663a2963455ee5733cc}\label{classEconomicEvent_a6b58ce5499fca663a2963455ee5733cc}} 
+\index{EconomicEvent@{EconomicEvent}!EconomicEvent@{EconomicEvent}}
+\index{EconomicEvent@{EconomicEvent}!EconomicEvent@{EconomicEvent}}
+\doxysubsubsection{\texorpdfstring{EconomicEvent()}{EconomicEvent()}}
+{\footnotesize\ttfamily Economic\+Event\+::\+Economic\+Event (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type,  }\item[{const std\+::string \&}]{impact }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \mbox{\hyperlink{classEconomicEvent}{Economic\+Event}}. 
+
+Конструктор экономического события.
+
+Этот конструктор инициализирует тип и воздействие экономического события.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Тип экономического события. \\
+\hline
+{\em impact} & Воздействие экономического события.\\
+\hline
+\end{DoxyParams}
+Этот конструктор инициализирует объект экономического события с заданным типом и воздействием.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Тип экономического события. \\
+\hline
+{\em impact} & Воздействие события на характеристики игрока. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file Economic\+Event.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEconomicEvent_a2ea9dc47968aefd2e0aac7ac47f844a4}\label{classEconomicEvent_a2ea9dc47968aefd2e0aac7ac47f844a4}} 
+\index{EconomicEvent@{EconomicEvent}!trigger@{trigger}}
+\index{trigger@{trigger}!EconomicEvent@{EconomicEvent}}
+\doxysubsubsection{\texorpdfstring{trigger()}{trigger()}}
+{\footnotesize\ttfamily void Economic\+Event\+::trigger (\begin{DoxyParamCaption}\item[{int \&}]{score,  }\item[{const \mbox{\hyperlink{classCharacteristic}{Characteristic}} \&}]{characteristic }\end{DoxyParamCaption})}
+
+
+
+Активирует экономическое событие. 
+
+Этот метод применяет воздействие экономического события к указанному счету и характеристике.
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & Ссылка на счет, который будет изменен. \\
+\hline
+{\em characteristic} & Характеристика, к которой будет применено воздействие.\\
+\hline
+\end{DoxyParams}
+Этот метод применяет эффект экономического события к счету игрока в зависимости от его воздействия.
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & Ссылка на счет игрока, который будет изменен в результате события. \\
+\hline
+{\em characteristic} & Объект, представляющий характеристики игрока, на которые будет оказано влияние. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Economic\+Event.\+cpp.
+
+
+
+References Characteristic\+::apply\+Effect(), impact, and type.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEconomicEvent_a2ea9dc47968aefd2e0aac7ac47f844a4_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classEconomicEvent_a4be49bd7319e88f2bfbba1c8ed7d31b9}\label{classEconomicEvent_a4be49bd7319e88f2bfbba1c8ed7d31b9}} 
+\index{EconomicEvent@{EconomicEvent}!impact@{impact}}
+\index{impact@{impact}!EconomicEvent@{EconomicEvent}}
+\doxysubsubsection{\texorpdfstring{impact}{impact}}
+{\footnotesize\ttfamily std\+::string Economic\+Event\+::impact}
+
+
+
+Воздействие экономического события. 
+
+
+
+Definition at line 19 of file economicevent.\+h.
+
+
+
+Referenced by trigger().
+
+\mbox{\Hypertarget{classEconomicEvent_af95fb5dea2ac675eb31f86d96e0af3d3}\label{classEconomicEvent_af95fb5dea2ac675eb31f86d96e0af3d3}} 
+\index{EconomicEvent@{EconomicEvent}!type@{type}}
+\index{type@{type}!EconomicEvent@{EconomicEvent}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily std\+::string Economic\+Event\+::type}
+
+
+
+Тип экономического события. 
+
+
+
+Definition at line 16 of file economicevent.\+h.
+
+
+
+Referenced by trigger().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{economicevent_8h}{economicevent.\+h}}\item 
+src/\mbox{\hyperlink{EconomicEvent_8cpp}{Economic\+Event.\+cpp}}\end{DoxyCompactItemize}

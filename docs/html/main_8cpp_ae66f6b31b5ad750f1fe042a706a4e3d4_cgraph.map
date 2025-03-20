@@ -1,0 +1,22 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Основная функция программы." alt="" coords="5,379,63,408"/>
+<area shape="rect" id="node2" href="$classBoard.html#ac18aa73f00b1de4c61e9de5df15df19d" title="Вычисляет финальный счет игрока." alt="" coords="111,5,325,35"/>
+<area shape="rect" id="node3" href="$utils_8cpp.html#aff6c831918692405e75fc55c43424304" title="Очищает консоль." alt="" coords="159,59,277,88"/>
+<area shape="rect" id="node4" href="$classBoard.html#a3e54cfa69fc7725ef04cd8200787d7a4" title="Отображает игровое поле." alt="" coords="156,112,280,141"/>
+<area shape="rect" id="node6" href="$classGraphics.html#a24af3365d5d896d88f15f7fc099e146c" title="Отображает заголовок игры." alt="" coords="131,165,305,195"/>
+<area shape="rect" id="node7" href="$classAI.html#a3e3d4a8b6175aeec8743ca0f7fad8275" title="Берет бонусную карту из колоды." alt="" coords="137,272,299,301"/>
+<area shape="rect" id="node9" href="$classPlayer.html#ac5061e3aacd98e0573121e4ce8563c85" title="Тянет бонусную карту из колоды." alt="" coords="122,219,314,248"/>
+<area shape="rect" id="node10" href="$classAI.html#a1c36df63fe947d70bb8743ed6233aa18" title="Берет карту из колоды." alt="" coords="161,379,275,408"/>
+<area shape="rect" id="node13" href="$classPlayer.html#a3ef87a3e79e536318681d1685e2e48be" title="Тянет карту из колоды." alt="" coords="145,325,291,355"/>
+<area shape="rect" id="node14" href="$classDeck.html#aa8b983aef84710e2c451b30fceda4aa3" title="Проверяет, пуста ли какая&#45;либо из колод." alt="" coords="123,432,313,461"/>
+<area shape="rect" id="node15" href="$classBoard.html#aee9a2d0787cca126de34c19c195ac5a3" title="Проверяет, пуста ли ячейка." alt="" coords="407,511,566,540"/>
+<area shape="rect" id="node16" href="$classBoard.html#a27a1a78ef9fdd5f22e2036bc3d609a43" title="Размещает объект на игровом поле." alt="" coords="139,485,297,515"/>
+<area shape="rect" id="node17" href="$classDice.html#a612a16c434160895563d19099ca0b33b" title="Бросает игральную кость." alt="" coords="175,589,261,619"/>
+<area shape="rect" id="node18" href="$classAI.html#aaedb67f8eb41084e631071baeafb826d" title="Отображает карты на руке AI." alt="" coords="157,643,279,672"/>
+<area shape="rect" id="node19" href="$classPlayer.html#a71160e37e103409533c94c40f3c8e5e5" title="Отображает карты на руке игрока." alt="" coords="141,696,295,725"/>
+<area shape="rect" id="node20" href="$classGame.html#ae8638ccdb0ef3bf39a6affa30aa1258f" title="Запускает игру." alt="" coords="145,749,291,779"/>
+<area shape="rect" id="node5" href="$classGraphics.html#a5ae1d3b63bc0284b0dc0d5e0aead8325" title="Отображает игровое поле." alt="" coords="393,112,581,141"/>
+<area shape="rect" id="node8" href="$classDeck.html#acccd84b4ce7ecdbb2747da303880a335" title="Вытаскивает бонусную карту." alt="" coords="395,245,578,275"/>
+<area shape="rect" id="node11" href="$classDeck.html#a044311930dc24ddf9e659ce69c768caa" title="Вытаскивает строительную карту." alt="" coords="373,379,600,408"/>
+<area shape="rect" id="node12" href="$classDeck.html#a5ca484cc79e48486fd6a2ba08c78954e" title="Вытаскивает карту события." alt="" coords="397,325,576,355"/>
+</map>

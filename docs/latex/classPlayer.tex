@@ -1,0 +1,264 @@
+\hypertarget{classPlayer}{}\doxysection{Player Class Reference}
+\label{classPlayer}\index{Player@{Player}}
+
+
+Класс, представляющий игрока в игре.  
+
+
+
+
+{\ttfamily \#include $<$player.\+h$>$}
+
+
+
+Inheritance diagram for Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classPlayer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classPlayer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer_a6b2c63742b6584c9e897a29415efb0d0}{Player}} (const std\+::string \&\mbox{\hyperlink{classPlayerBase_a7499d85861bf268fa14b0e89bb399956}{name}}, const \mbox{\hyperlink{classCharacteristic}{Characteristic}} \&\mbox{\hyperlink{classPlayerBase_a984af3557c71c216f91e093071ec63b5}{characteristic}})
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classPlayer}{Player}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a3ef87a3e79e536318681d1685e2e48be}{draw\+Card}} (\mbox{\hyperlink{classDeck}{Deck}} \&deck, bool is\+Construction)
+\begin{DoxyCompactList}\small\item\em Тянет карту из колоды. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_ac5061e3aacd98e0573121e4ce8563c85}{draw\+Bonus\+Card}} (\mbox{\hyperlink{classDeck}{Deck}} \&deck)
+\begin{DoxyCompactList}\small\item\em Тянет бонусную карту из колоды. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a71160e37e103409533c94c40f3c8e5e5}{show\+Hand}} () const
+\begin{DoxyCompactList}\small\item\em Отображает карты на руке игрока. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer_a749d2c00e1fe0f5c2746f7505a58c062}{$\sim$\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор класса \mbox{\hyperlink{classPlayer}{Player}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Класс, представляющий игрока в игре. 
+
+Этот класс наследует от класса \mbox{\hyperlink{classPlayerBase}{Player\+Base}} и предоставляет функциональность для управления картами игрока, включая возможность тянуть карты из колоды и отображать свою руку. 
+
+Definition at line 15 of file player.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPlayer_a6b2c63742b6584c9e897a29415efb0d0}\label{classPlayer_a6b2c63742b6584c9e897a29415efb0d0}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const \mbox{\hyperlink{classCharacteristic}{Characteristic}} \&}]{characteristic }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \mbox{\hyperlink{classPlayer}{Player}}. 
+
+Этот конструктор инициализирует игрока с заданным именем и характеристиками.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Имя игрока. \\
+\hline
+{\em characteristic} & Характеристика игрока.\\
+\hline
+\end{DoxyParams}
+Инициализирует игрока с указанным именем и характеристикой.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Имя игрока. \\
+\hline
+{\em characteristic} & Характеристика игрока, влияющая на игровой процесс. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file Player.\+cpp.
+
+\mbox{\Hypertarget{classPlayer_a749d2c00e1fe0f5c2746f7505a58c062}\label{classPlayer_a749d2c00e1fe0f5c2746f7505a58c062}} 
+\index{Player@{Player}!````~Player@{$\sim$Player}}
+\index{````~Player@{$\sim$Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{$\sim$Player()}{~Player()}}
+{\footnotesize\ttfamily Player\+::$\sim$\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор класса \mbox{\hyperlink{classPlayer}{Player}}. 
+
+Этот деструктор освобождает ресурсы, связанные с игроком.
+
+Освобождает память, выделенную для карт в руке игрока. 
+
+Definition at line 72 of file Player.\+cpp.
+
+
+
+References Player\+Base\+::hand.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPlayer_ac5061e3aacd98e0573121e4ce8563c85}\label{classPlayer_ac5061e3aacd98e0573121e4ce8563c85}} 
+\index{Player@{Player}!drawBonusCard@{drawBonusCard}}
+\index{drawBonusCard@{drawBonusCard}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{drawBonusCard()}{drawBonusCard()}}
+{\footnotesize\ttfamily void Player\+::draw\+Bonus\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDeck}{Deck}} \&}]{deck }\end{DoxyParamCaption})}
+
+
+
+Тянет бонусную карту из колоды. 
+
+Метод для взятия бонусной карты из колоды.
+
+Этот метод позволяет игроку тянуть бонусную карту из колоды.
+
+
+\begin{DoxyParams}{Parameters}
+{\em deck} & Ссылка на колоду, из которой будет тянута бонусная карта.\\
+\hline
+\end{DoxyParams}
+Игрок берет бонусную карту из колоды и добавляет ее в свою руку.
+
+
+\begin{DoxyParams}{Parameters}
+{\em deck} & Колода, из которой берется бонусная карта. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file Player.\+cpp.
+
+
+
+References Deck\+::draw\+Bonus\+Card(), Player\+Base\+::hand, Card\+::name, and Player\+Base\+::name.
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlayer_ac5061e3aacd98e0573121e4ce8563c85_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classPlayer_ac5061e3aacd98e0573121e4ce8563c85_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_a3ef87a3e79e536318681d1685e2e48be}\label{classPlayer_a3ef87a3e79e536318681d1685e2e48be}} 
+\index{Player@{Player}!drawCard@{drawCard}}
+\index{drawCard@{drawCard}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{drawCard()}{drawCard()}}
+{\footnotesize\ttfamily void Player\+::draw\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDeck}{Deck}} \&}]{deck,  }\item[{bool}]{is\+Construction }\end{DoxyParamCaption})}
+
+
+
+Тянет карту из колоды. 
+
+Метод для взятия карты из колоды.
+
+Этот метод позволяет игроку тянуть карту из колоды.
+
+
+\begin{DoxyParams}{Parameters}
+{\em deck} & Ссылка на колоду, из которой будет тянута карта. \\
+\hline
+{\em is\+Construction} & Флаг, указывающий, является ли карта строительной (true) или нет (false).\\
+\hline
+\end{DoxyParams}
+Игрок берет карту из колоды. В зависимости от параметра is\+Construction берется либо карта строительства, либо карта события.
+
+
+\begin{DoxyParams}{Parameters}
+{\em deck} & Колода, из которой берется карта. \\
+\hline
+{\em is\+Construction} & Флаг, указывающий, какую карту взять\+: строительства (true) или события (false). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file Player.\+cpp.
+
+
+
+References Deck\+::draw\+Construction\+Card(), Deck\+::draw\+Event\+Card(), Player\+Base\+::hand, Card\+::name, and Player\+Base\+::name.
+
+
+
+Referenced by main(), and TEST().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlayer_a3ef87a3e79e536318681d1685e2e48be_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classPlayer_a3ef87a3e79e536318681d1685e2e48be_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_a71160e37e103409533c94c40f3c8e5e5}\label{classPlayer_a71160e37e103409533c94c40f3c8e5e5}} 
+\index{Player@{Player}!showHand@{showHand}}
+\index{showHand@{showHand}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{showHand()}{showHand()}}
+{\footnotesize\ttfamily void Player\+::show\+Hand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Отображает карты на руке игрока. 
+
+Метод для отображения карт в руке игрока.
+
+Этот метод выводит в консоль карты, которые находятся на руке у игрока.
+
+Выводит в консоль список всех карт, находящихся в руке игрока, с их названиями и описаниями. 
+
+Definition at line 58 of file Player.\+cpp.
+
+
+
+References Player\+Base\+::hand, and Player\+Base\+::name.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classPlayer_a71160e37e103409533c94c40f3c8e5e5_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{player_8h}{player.\+h}}\item 
+src/\mbox{\hyperlink{Player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}
