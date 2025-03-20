@@ -1,4 +1,4 @@
-/*Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2*/
+/* Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2 */
 #include "board.h"
 #include "graphics.h"
 #include <iostream> 
@@ -15,6 +15,17 @@ Board::Board()
     }
 }
 
+/**
+ * @brief Размещает объект на доске.
+ * 
+ * Этот метод размещает указанный объект на заданной ячейке доски,
+ * если ячейка пуста.
+ * 
+ * @param x Координата по оси X (строка).
+ * @param y Координата по оси Y (столбец).
+ * @param object Имя объекта, который нужно разместить.
+ * @param health Здоровье объекта.
+ */
 void Board::placeObject(int x, int y, const std::string& object, int health)
 {
     if (isCellEmpty(x, y))
@@ -28,16 +39,41 @@ void Board::placeObject(int x, int y, const std::string& object, int health)
     }
 }
 
+/**
+ * @brief Проверяет, пуста ли ячейка.
+ * 
+ * Этот метод проверяет, занята ли указанная ячейка на доске.
+ * 
+ * @param x Координата по оси X (строка).
+ * @param y Координата по оси Y (столбец).
+ * @return true Если ячейка пуста.
+ * @return false Если ячейка занята.
+ */
 bool Board::isCellEmpty(int x, int y)
 {
     return !grid[x][y].isOccupied;
 }
 
+/**
+ * @brief Отображает доску.
+ * 
+ * Этот метод вызывает функцию отображения графики для
+ * визуализации текущего состояния доски.
+ */
 void Board::display()
 {
     Graphics::displayBoard(grid);  
 }
 
+/**
+ * @brief Вычисляет финальный счет игрока.
+ * 
+ * Этот метод подсчитывает финальный счет игрока на основе
+ * объектов, размещенных на доске, с учетом префикса игрока.
+ * 
+ * @param playerPrefix Префикс игрока, для которого нужно подсчитать счет.
+ * @return int Финальный счет игрока.
+ */
 int Board::calculateFinalScore(const std::string& playerPrefix)
 {
     int score = 0;
@@ -68,6 +104,15 @@ int Board::calculateFinalScore(const std::string& playerPrefix)
     return score;
 }
 
+/**
+ * @brief Украсть здание у противника.
+ * 
+ * Этот метод случайным образом выбирает здание у противника
+ * и передает его текущему игроку.
+ * 
+ * @param fromPrefix Префикс игрока, у которого будет украдено здание.
+ * @param toPrefix Префикс игрока, которому будет передано здание.
+ */
 void Board::stealBuilding(const std::string& fromPrefix, const std::string& toPrefix)
 {
     std::vector<std::pair<int, int>> buildings;
@@ -98,6 +143,15 @@ void Board::stealBuilding(const std::string& fromPrefix, const std::string& toPr
     }
 }
 
+/**
+ * @brief Обменять все здания между двумя игроками.
+ * 
+ * Этот метод меняет здания между двумя игроками, 
+ * заменяя префиксы их зданий.
+ * 
+ * @param player1Prefix Префикс первого игрока.
+ * @param player2Prefix Префикс второго игрока.
+ */
 void Board::exchangeAllBuildings(const std::string& player1Prefix, const std::string& player2Prefix)
 {
     for (int i = 0; i < size; ++i)

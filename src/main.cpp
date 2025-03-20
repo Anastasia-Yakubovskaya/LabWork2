@@ -1,4 +1,4 @@
-/*Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2*/
+/* Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2 */
 #include "game.h"
 #include "player.h"
 #include "ai.h"
@@ -15,6 +15,15 @@
 #include "tradeevent.h"
 #include "stealcardevent.h"
 
+/**
+ * @brief Основная функция программы.
+ * 
+ * Эта функция инициализирует игру, создает игрока и ИИ, управляет ходами и завершает игру.
+ * В процессе игры игрок и ИИ поочередно выполняют действия, такие как строительство объектов,
+ * использование карт событий и бросание кубиков для определения бонусов или штрафов.
+ * 
+ * @return 0 в случае успешного завершения программы.
+ */
 int main()
 {
     srand(static_cast<unsigned int>(time(0)));

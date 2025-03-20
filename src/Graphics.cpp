@@ -1,4 +1,4 @@
-/*Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2*/
+/* Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2 */
 #include "graphics.h"
 #include <iostream>
 
@@ -8,6 +8,12 @@
 #define YELLOW  "\033[33m"
 #define PURPLE  "\033[35m"
 
+/**
+ * @brief Отображает заголовок игры.
+ * 
+ * Этот метод выводит стилизованный заголовок игры в консоль с использованием 
+ * цветного текста. Заголовок оформлен в виде ASCII-арт.
+ */
 void Graphics::displayTitle()
 {
     std::cout << PURPLE << R"(
@@ -20,6 +26,15 @@ void Graphics::displayTitle()
 )" << RESET << std::endl;
 }
 
+/**
+ * @brief Отображает игровое поле.
+ * 
+ * Этот метод выводит текущее состояние игрового поля в консоль. Каждая ячейка 
+ * поля отображается в зависимости от того, занята ли она и какой контент в ней находится.
+ * 
+ * @param grid Двумерный вектор, представляющий игровое поле, где каждая ячейка 
+ * содержит информацию о занятости, контенте и здоровье.
+ */
 void Graphics::displayBoard(const std::vector<std::vector<Cell>>& grid) {
     for (size_t i = 0; i < grid.size(); ++i) {
         for (size_t j = 0; j < grid[i].size(); ++j) {

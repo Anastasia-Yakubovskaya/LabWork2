@@ -1,9 +1,26 @@
-/*Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2*/
+/* Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2 */
 #include "characteristic.h"
 #include <iostream>
 
+/**
+ * @brief Конструктор характеристики.
+ * 
+ * Этот конструктор инициализирует объект характеристики с заданным типом.
+ * 
+ * @param type Тип характеристики, определяющий ее эффект.
+ */
 Characteristic::Characteristic(const std::string& type) : type(type) {}
 
+/**
+ * @brief Применяет эффект характеристики к счету.
+ * 
+ * Этот метод изменяет счет в зависимости от типа характеристики.
+ * В зависимости от типа, эффект может уменьшать урон от стихийных бедствий,
+ * снижать стоимость строительства или увеличивать количество получаемых очков.
+ * 
+ * @param score Ссылка на текущий счет игрока, который будет изменен.
+ * @param change Изменение, которое будет применено к счету.
+ */
 void Characteristic::applyEffect(int& score, int change) const
 {
     if (type == "Natural disasters deal 20% less damage")
@@ -22,6 +39,6 @@ void Characteristic::applyEffect(int& score, int change) const
     }
     else
     {
-        score += change;
+        score += change; // Применяем стандартное изменение
     }
 }

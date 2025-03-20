@@ -1,0 +1,56 @@
+# Имя проекта
+PROJECT_NAME           = "game"
+
+# Краткое описание проекта
+PROJECT_BRIEF          = "Game core development, exemplified by an RPG card game with a hierarchy of characters and abilities and simple artificial intelligence "
+
+# Номер версии проекта
+PROJECT_NUMBER         = 1.0
+
+# Директория, куда будет сохраняться документация
+OUTPUT_DIRECTORY       = docs
+
+# Генерация HTML-документации
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+
+# Генерация LaTeX-документации (по умолчанию отключена)
+GENERATE_LATEX         = YES
+
+# Директория с исходным кодом
+INPUT                  = src
+
+# Рекурсивный обход поддиректорий
+RECURSIVE              = YES
+
+# Генерация документации для всех элементов, даже без комментариев
+EXTRACT_ALL            = YES
+
+# Генерация документации для приватных и защищенных членов классов
+EXTRACT_PRIVATE        = YES
+EXTRACT_PROTECTED      = YES
+
+# Генерация графиков (например, диаграмм классов)
+HAVE_DOT               = YES
+CLASS_DIAGRAMS         = YES
+
+# Оптимизация для C++
+OPTIMIZE_OUTPUT_FOR_C  = NO
+OPTIMIZE_OUTPUT_JAVA   = NO
+
+# Генерация перекрестных ссылок
+SOURCE_BROWSER         = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+# Генерация индекса
+GENERATE_TREEVIEW      = YES
+
+# Поддержка Markdown
+MARKDOWN_SUPPORT       = YES
+
+# Игнорировать определенные файлы или директории
+EXCLUDE_PATTERNS       = */.git/* */tmp/*
+
+# Язык комментариев (по умолчанию английский)
+OUTPUT_LANGUAGE        = English

@@ -1,4 +1,4 @@
-/*Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2*/
+/* Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2 */
 #include "game.h"
 #include "constructioncard.h"
 #include "naturaldisaster.h"
@@ -8,6 +8,14 @@
 #include "tradeevent.h"
 #include "stealcardevent.h"
 
+/**
+ * @brief Конструктор игры.
+ * 
+ * Этот конструктор инициализирует игру, создавая колоду карт и добавляя в нее различные типы карт.
+ * 
+ * В колоду добавляются карты строительства, природных катастроф, экономических событий, 
+ * политических событий, событий с изменением значений и событий торговли.
+ */
 Game::Game()
 {
     // Добавление карт в колоду
@@ -29,6 +37,11 @@ Game::Game()
     deck.shuffle();
 }
 
+/**
+ * @brief Запускает игру.
+ * 
+ * Этот метод выводит сообщение о начале игры.
+ */
 void Game::startGame()
 {
     std::cout << "The game has started!" << std::endl;

@@ -1,10 +1,28 @@
-/*Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2*/
+/* Yakubovskaya Anastasya st130155@student.spbu.ru LabWork2 */
 #include "stealcardevent.h"
 #include <iostream>
 
+/**
+ * @brief Конструктор класса StealCardEvent.
+ * 
+ * Инициализирует карту события кражи с указанным названием, описанием и целью.
+ * 
+ * @param name Название карты (например, "Steal Card").
+ * @param description Описание карты (например, "Steals an object from the opponent").
+ * @param target Указатель на игрока, у которого будет украден объект.
+ */
 StealCardEvent::StealCardEvent(const std::string& name, const std::string& description, PlayerBase* target)
     : BonusCard(name, description, "StealCardEvent"), target(target), stolenCard(nullptr) {}
 
+/**
+ * @brief Активирует эффект карты кражи.
+ * 
+ * Этот метод позволяет текущему игроку украсть объект у целевого игрока.
+ * Объект выбирается случайным образом из всех объектов целевого игрока на игровом поле.
+ * 
+ * @param board Игровое поле, на котором находятся объекты.
+ * @param currentPlayer Указатель на текущего игрока, который активирует карту.
+ */
 void StealCardEvent::trigger(Board& board, PlayerBase* currentPlayer)
 {
     std::cout << "Triggering StealCardEvent: " << name << "\n";
