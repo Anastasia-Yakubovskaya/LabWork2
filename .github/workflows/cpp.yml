@@ -17,14 +17,24 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y g++ libgtest-dev build-essential
+          sudo apt-get install -y g++ libgtest-dev libgmock-dev build-essential
           
-      - name: Build Google Test libraries
+      - name: Build and install Google Test
         run: |
-          cd /usr/src/gtest
-          sudo g++ -std=c++17 -I. -c *.cc
-          sudo ar -rv libgtest.a *.o
-          sudo cp libgtest.a /usr/lib
+          mkdir -p /tmp/gtest-build
+          cd /tmp/gtest-build
+          
+          sudo g++ -std=c++17 -I/usr/include/gtest -c /usr/src/gtest/src/gtest-all.cc
+          sudo ar -rv libgtest.a gtest-all.o
+          
+          sudo g++ -std=c++17 -I/usr/include/gtest -I/usr/include/gmock -c /usr/src/gmock/src/gmock-all.cc
+          sudo ar -rv libgmock.a gmock-all.o
+          
+          sudo cp *.a /usr/lib
+          sudo ldconfig
+          
+          sudo cp -r /usr/include/gtest /usr/local/include
+          sudo cp -r /usr/include/gmock /usr/local/include
           
       - name: Build project and tests
         run: |
@@ -35,10 +45,8 @@ jobs:
         run: |
           if [ ! -f "./game_tests" ]; then
             echo "::error::Test executable not found!"
-            echo "Current directory contents:"
-            ls -la
-            echo "Files in tests directory:"
-            ls -la tests/
+            echo "Directory contents:"
+            ls -laR
             exit 1
           fi
           
