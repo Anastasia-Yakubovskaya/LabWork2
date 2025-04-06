@@ -1,29 +1,42 @@
 name: C++ CI
 
-on:  
+on:
   push:
     branches: [main, CreatingGameBranch, descriptionBranch, realisation, testingbranch]
-  pull_request:    
+  pull_request:
     branches: [main, CreatingGameBranch, descriptionBranch, realisation, testingbranch]
-     
-jobs:  
+
+jobs:
   build:
     runs-on: ubuntu-latest
     
-    steps:    
-      - name: Checkout code      
-        uses: actions/checkout@v2
-   
-      - name: Set up GCC      
-        run: sudo apt-get install -y g++
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
         
-      - name: Install Google Test      
+      - name: Install dependencies
         run: |
-          sudo apt-get install -y libgtest-dev        
-          sudo apt-get install -y cmake 
-
-      - name: Build with Makefile      
-        run: make
-      
+          sudo apt-get update
+          sudo apt-get install -y g++ cmake libgtest-dev build-essential
+          
+      - name: Build Google Test
+        run: |
+          cd /usr/src/gtest
+          sudo cmake CMakeLists.txt
+          sudo make
+          sudo cp *.a /usr/lib
+          
+      - name: Build project and tests
+        run: |
+          make
+          make test
+          
       - name: Run tests
-        run: ./runTests
+        run: |
+          if [ -f "./game_tests" ]; then
+            ./game_tests
+          else
+            echo "Error: Test executable not found!"
+            find . -name "game_tests" -type f
+            exit 1
+          fi
