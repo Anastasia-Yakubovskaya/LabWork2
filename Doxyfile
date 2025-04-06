@@ -1,0 +1,90 @@
+# Имя проекта
+PROJECT_NAME           = "Game Core Development"
+
+# Краткое описание проекта
+PROJECT_BRIEF          = "Game core development, exemplified by an RPG card game with a hierarchy of characters and abilities and simple artificial intelligence."
+
+# Номер версии проекта
+PROJECT_NUMBER         = 2.0
+
+# Директория, куда будет сохраняться документация
+OUTPUT_DIRECTORY       = docs
+
+# Генерация HTML-документации
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+
+# Генерация LaTeX-документации
+GENERATE_LATEX         = YES
+LATEX_OUTPUT           = latex
+PDF_HYPERLINKS         = YES
+USE_PDFLATEX           = YES
+
+# Директория с исходным кодом
+INPUT                  = src include tests
+
+
+# Рекурсивный обход поддиректорий
+RECURSIVE              = YES
+
+# Генерация документации для всех элементов, даже без комментариев
+EXTRACT_ALL            = YES
+
+# Генерация документации для приватных и защищенных членов классов
+EXTRACT_PRIVATE        = YES
+EXTRACT_PROTECTED      = YES
+
+# Генерация графиков (например, диаграмм классов)
+HAVE_DOT               = YES
+CLASS_DIAGRAMS         = YES
+DOT_IMAGE_FORMAT       = svg
+DOT_TRANSPARENT        = YES
+DOT_FONTNAME           = Arial
+DOT_FONTSIZE           = 12
+
+# Оптимизация для C++
+OPTIMIZE_OUTPUT_FOR_C  = NO
+OPTIMIZE_OUTPUT_JAVA   = NO
+
+# Генерация перекрестных ссылок
+SOURCE_BROWSER         = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+# Генерация индекса
+GENERATE_TREEVIEW      = YES
+
+# Поддержка Markdown
+MARKDOWN_SUPPORT       = YES
+
+# Игнорировать определенные файлы или директории
+EXCLUDE_PATTERNS       = */.git/* */tmp/*
+
+# Язык комментариев (по умолчанию английский)
+OUTPUT_LANGUAGE        = English
+
+# Указать файл с описанием проекта для главной страницы
+USE_MDFILE_AS_MAINPAGE = README.md
+
+# Включить генерацию диаграмм последовательностей
+UML_LOOK               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+
+# Включить генерацию документации для групп
+GROUP_GRAPHS           = YES
+
+# Включить генерацию документации для файлов
+SHOW_FILES             = YES
+
+# Включить генерацию документации для пространств имен
+SHOW_NAMESPACES        = YES
+
+# Включить генерацию документации для include-файлов
+SHOW_INCLUDE_FILES     = YES
+
+# Включить генерацию документации для использованных файлов
+SHOW_USED_FILES        = YES
+
+# Включить генерацию документации для групп
+SHOW_GROUPED_MEMB_INC  = YES
