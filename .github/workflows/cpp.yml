@@ -5,50 +5,24 @@ on:
     branches: [main, CreatingGameBranch, descriptionBranch, realisation, testingbranch]
   pull_request:
     branches: [main, CreatingGameBranch, descriptionBranch, realisation, testingbranch]
-
-jobs:
-  build-and-test:
+jobs:  
+  build:
     runs-on: ubuntu-latest
     
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    steps:    
+      - name: Checkout code      
+        uses: actions/checkout@v2
+   
+      - name: Set up GCC      
+        run: sudo apt-get install -y g++
         
-      - name: Install dependencies
+      - name: Install Google Test      
         run: |
-          sudo apt-get update
-          sudo apt-get install -y g++ libgtest-dev libgmock-dev build-essential
-          
-      - name: Build and install Google Test
-        run: |
-          mkdir -p /tmp/gtest-build
-          cd /tmp/gtest-build
-          
-          sudo g++ -std=c++17 -I/usr/include/gtest -c /usr/src/gtest/src/gtest-all.cc
-          sudo ar -rv libgtest.a gtest-all.o
-          
-          sudo g++ -std=c++17 -I/usr/include/gtest -I/usr/include/gmock -c /usr/src/gmock/src/gmock-all.cc
-          sudo ar -rv libgmock.a gmock-all.o
-          
-          sudo cp *.a /usr/lib
-          sudo ldconfig
-          
-          sudo cp -r /usr/include/gtest /usr/local/include
-          sudo cp -r /usr/include/gmock /usr/local/include
-          
-      - name: Build project and tests
-        run: |
-          make
-          make test
-          
-      - name: Verify test executable exists
-        run: |
-          if [ ! -f "./game_tests" ]; then
-            echo "::error::Test executable not found!"
-            echo "Directory contents:"
-            ls -laR
-            exit 1
-          fi
-          
+          sudo apt-get install -y libgtest-dev        
+          sudo apt-get install -y cmake 
+
+      - name: Build with Makefile      
+        run: make
+      
       - name: Run tests
         run: ./game_tests
