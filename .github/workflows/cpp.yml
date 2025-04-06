@@ -1,13 +1,10 @@
 name: C++ CI
 
-on:  
+on:
   push:
-    branches:      
-      - main
-  pull_request:    
-    branches:
-      - main
-
+    branches: [main, CreatingGameBranch, descriptionBranch, realisation, testingbranch]
+  pull_request:
+    branches: [main, CreatingGameBranch, descriptionBranch, realisation, testingbranch]
 jobs:  
   build:
     runs-on: ubuntu-latest
@@ -28,4 +25,4 @@ jobs:
         run: make
       
       - name: Run tests
-        run: ./runTests
+        run: make test
